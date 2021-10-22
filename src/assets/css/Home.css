@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam&family=Montserrat:wght@500&display=swap');
+
+
+#first-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.subcontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+}
+
+#slogan {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 900;
+    font-size: 55px;
+    display: inline-block;
+    padding-bottom: 20px;
+}
+
+#img-home {
+    height:  580px;
+    width: 850px;
+    padding: 5px;
+    margin-left: 50px;
+}
+
+span {
+    color: gold;
+}
+
+#scroll-down {
+    height: 198px;
+    width: 205px;
+    padding-top: 20px;
+
+}
+
+
+.second-container {
+    align-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: auto;
+    justify-content: center;
+    margin-top: 80px;
+    background-color: #E12424;
+    width: 30%;
+    height: 100px;
+    border-radius: 50px;
+
+}
+
+#us {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 900;
+    font-size: 55px;
+    display: inline-block;
+    text-align: center;
+    color: whitesmoke;
+}
+
+#third-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 70px;
+}
+
+.about-us {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    width: 650px;
+
+}
+
+#description-us {
+    font-family: Kalam;
+    font-style: italic;
+    text-align: center;
+    font-size: 30px;
+    display: inline-block;
+
+}
+
+#img-about {
+    height: 381px;
+    width: 430px;
+
+}

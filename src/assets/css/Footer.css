@@ -1,0 +1,86 @@
+footer{
+    background: #111;
+    height: auto;
+    font-family: Open Sans;
+    padding-top: 2.5em;
+    color: whitesmoke;
+    width: 100%;
+    bottom: 0;
+    position: relative;
+}
+
+.footer_content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer_content h1{
+    font-size: 1.8rem;
+    font-weight: 400px;
+    line-height: 3rem;
+    text-align: center;
+    font-family: Arial;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1.25rem;
+    min-width: 12.5rem;
+}
+
+.contenedor{
+    align-items: center;
+    margin: auto;
+}
+
+#email{
+    border: 0;
+    padding: 0.625rem;
+    margin-top: 0.3125rem;
+}
+
+#submit{
+    background-color: #3DE582;
+    color: black;
+    cursor: pointer;
+    border: 0;
+    padding: 0.625rem 0.9375rem;
+    margin-top: 0.3125rem;
+}
+
+.socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.socials a i{
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 1.1rem;
+    transition: color .4s ease;
+    margin: 0 0.625em;
+}
+
+.socials a:hover i{
+    color: #3DE582;
+}
+
+.footer_bottom{
+    background: #000;
+    padding: 1.25em;
+    text-align: center;
+}
+
+.footer_bottom p{
+    font-size: 0.875em;
+    word-spacing: 0.125em;
+    font-family: Arial;
+}
+

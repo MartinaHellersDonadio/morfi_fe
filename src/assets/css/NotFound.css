@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam&family=Montserrat:wght@500&display=swap');
+
+
+.subcontainer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: auto;
+}
+
+#notfound {
+    font-family: "Montserrat";
+    font-weight: 900;
+    font-size: 150px;
+    display: inline-block;
+    padding-bottom: 20px;
+}
+
+span {
+    color: gold;
+}
