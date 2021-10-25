@@ -12,18 +12,37 @@
     </div>
 
     <div class="second-container">
+      <div class="process">
+        <img class="icon" src="../assets/img/user_icon.png" alt="identity icon">
+        <p class="description-icon">{{ icon1 }}</p>
+      </div>
+
+      <div class="process">
+        <img class="icon" src="../assets/img/shop_icon.png" alt="shop icon">
+        <p class="description-icon">{{ icon2 }}</p>
+      </div>
+
+      <div class="process">
+        <img class="icon" src="../assets/img/star_icon.png" alt="star icon">
+        <p class="description-icon">{{ icon3 }}</p>
+      </div>
+    </div>
+
+    <div class="third-container">
       <h1 id="us">{{ title2 }}</h1>
     </div>
 
-    <div id="third-container">
+    <div id="fourth-container">
       <div class="about-us">
         <p id="description-us">{{ description }}</p>
       </div>
 
       <div class="about-us">
-        <img id="img-about" src="../assets/img/about_us.png" alt="img about us">
+        <img id="img-about" src="../assets/img/compu.png" alt="img about us">
       </div>
     </div>
+
+
 
   </div>
 </template>
@@ -33,11 +52,14 @@ export default {
   name: "Home",
   data () {
     return {
-      title2: "About Us",
-      description: "We seek to offer a space where diners can easily find, review and reserve the best gastronomic experiences in Buenos Aires. Our main objective is to be able to increase the visualization of those marginalized proposals that, in times of pandemic, seek to strengthen the approach to their clients",
       slogan1: "It's not just food,",
       slogan2: "it's",
       slogan3: "the experience.",
+      icon1: "Sign up or Log in to start your experience at Morfi",
+      icon2: "Choose a gastronomic proposal and reserve your place",
+      icon3: "And enjoy!",
+      title2: "About Us",
+      description: "We seek to offer a space where diners can easily find, review and reserve the best gastronomic experiences in Buenos Aires. Our main objective is to be able to increase the visualization of those marginalized proposals that, in times of pandemic, seek to strengthen the approach to their clients",
     }
   },
 }

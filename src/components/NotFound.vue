@@ -1,22 +1,17 @@
 <template>
   <div>
-    <Header/>
-    <div class="subcontainer">
+    <div id="notfound-container">
       <h1 id="notfound">{{ phrase1 }}<br><span>{{ phrase2 }}</span> {{ phrase3 }}</h1>
     </div>
-    <Footer/>
   </div>
 </template>
 
 <script>
-import Header from "./Header";
-import Footer from "./Footer";
 
 export default {
   name: "NotFound",
   components: {
-    Footer,
-    Header,
+
   },
   data () {
     return {
