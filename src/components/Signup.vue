@@ -5,18 +5,18 @@
     <hr>
     <form class="input-form">
         <label for="email"><b>Email</b></label>
-        <input type="text" placeholder="Enter Email" name="email" id="email" required>
+        <input type="text" placeholder="Enter Email" v-model="email" id="email" required>
 
         <label for="psw"><b>Password</b></label>
-        <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+        <input type="password" placeholder="Enter Password" v-model="password" id="psw" required>
 
         <label for="psw-repeat"><b>Repeat Password</b></label>
-        <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
+        <input type="password" placeholder="Repeat Password" v-model="password" id="psw-repeat" required>
         <hr>
 
         <button type="submit" class="formbtn">Register</button>
 
-        <p id="signin">Already have an account? <a href="">Sign in</a>.</p>
+        <p id="signin">Already have an account? <a href="">Sign in</a></p>
     </form>
   </div>
 </template>
@@ -28,6 +28,12 @@ export default {
   name: "Signup",
   components: {
 
+  },
+  data () {
+    return {
+      email: "",
+      password: "",
+    }
   }
 }
 </script>

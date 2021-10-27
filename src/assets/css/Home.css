@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Kalam&family=Montserrat:wght@500&display=swap');
 #home {
-    padding-top: 200px;
+    padding-top: 150px;
     padding-bottom: 200px;
 }
 
@@ -53,7 +53,7 @@ span {
     margin-bottom:  200px;
     flex-wrap: wrap;
     align-items: center;
-    margin-top: 200px;
+    margin-top: 100px;
     padding-bottom: 0;
 }
 
@@ -62,8 +62,8 @@ span {
     flex-direction: column;
     align-items: center;
     margin: auto;
-    padding: 1.25em;
-    width: 490px;
+    padding: 1em;
+    width: 470px;
     align-content: center;
     border-radius: 30px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -104,9 +104,9 @@ span {
 
 #us {
     font-family: "Montserrat", sans-serif;
-    font-weight: 900;
-    font-size: 55px;
-    display: inline-block;
+    font-weight: 800;
+    font-size: 40px;
+    display: flex;
     text-align: center;
     color: whitesmoke;
 }
@@ -118,7 +118,7 @@ span {
     justify-content: space-around;
     align-items: center;
     margin-top: 30px;
-    margin-bottom: 70px;
+    margin-bottom: 200px;
 }
 
 .about-us {
@@ -142,8 +142,30 @@ span {
 #img-about {
     height: 491px;
     width: 530px;
-    margin-left: 300px;
-    margin-right: 100px;
+
 }
 
 
+#ending-phrase {
+    font-family: Montserrat;
+    color: #E12424;
+    text-align: center;
+    margin: auto;
+    font-size: 40px;
+    display: inline-block;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.fifth-container {
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+
+}
+#bottom-home {
+    margin: auto;
+    height: 150px;
+}

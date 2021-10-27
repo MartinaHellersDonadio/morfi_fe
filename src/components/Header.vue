@@ -33,7 +33,7 @@ export default {
       section1: "Home",
       section2: "Restaurants",
       section3: "Events",
-      button1: "Want to join?",
+      button1: "Do you have a restaurant?",
       button2: "Log in",
       button3: "Sign up",
     }

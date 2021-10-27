@@ -1,34 +1,49 @@
 <template>
-  <footer>
-    <div class="footer_content">
-      <h1>Suscribe to our newsletter</h1>
-      <form>
-        <div class="contenedor">
-          <input id="email" type="email" name="email" placeholder="Ingresa tu e-mail">
-          <input id="submit" type="submit" value="Subscribirme">
+  <div>
+    <footer>
+      <div class="footer-container">
+        <div class="row">
+          <div class="footer-col">
+            <h4>Morfi</h4>
+            <ul>
+              <li><router-link to="/home">About Us</router-link></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Get Help</h4>
+            <ul>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#"></a> </li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Check our Website</h4>
+            <ul>
+              <li><a href="#">Events</a></li>
+              <li><a href="#">Restaurants</a></li>
+              <li><a href="#">Home</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Join our newsletter</h4>
+            <input type="email"  v-model="footerEmail" id="footer-email" placeholder="Enter Your Email Address">
+            <button type="submit" class="footer-email-btn">Submit</button>
+          </div>
         </div>
-      </form>
-      <ul class="socials">
-        <li><a href="#"><i class="fa fa-wordpress"></i></a></li>
-        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-        <li><a href="#"><i class="fa fa-youtube"></i></a></li>
-        <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
-      </ul>
-    </div>
-
-    <div class="footer_bottom">
-      <p>Copyright &copy;2020 MORFI | All rights reserved </p>
-    </div>
-
-  </footer>
+          <p class="footer-bottom">Copyright &copy;2020 MORFI | All rights reserved </p>
+      </div>
+    </footer>
+  </div>
 </template>
 
 <script>
 export default {
-  name: "Footer"
+  name: "Footer",
+  data () {
+    return {
+      footerEmail: "",
+    }
+  }
 }
 </script>
 

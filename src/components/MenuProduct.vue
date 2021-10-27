@@ -63,15 +63,23 @@ export default {
 }
 
 .text {
-  width: 800px;
-  height: 330px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  width: 700px;
+  height: 360px;
 }
 
+.text:hover {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.text-container {
+  color: #E12424;
+  font-weight: 25px;
+}
 
 .text-time {
   font-weight: bolder;
-  font-size: 25px;
+  font-size: 20px;
+  text-transform: uppercase;
 }
 
 .text-location {

@@ -1,7 +1,15 @@
+#welcome-text {
+    text-align: center;
+    margin: auto;
+    font-size: 60px;
+    margin-bottom: 20px;
+    color: #E12424;
+    margin-top: 10px;
+}
+
 .main-section{
     font-family: "Montserrat";
     margin: auto;
-    margin-top: 80px;
     width: 650px;
 
 }
@@ -14,7 +22,7 @@
 }
 
 .login {
-    margin-top: 250px;
+    margin-top: 10px;
 }
 .title-form{
     text-align: center;
@@ -35,7 +43,6 @@
     padding: 16px;
     margin: auto;
     border-radius: 3px;
-    padding-bottom: 500px;
     display: flex;
     flex-wrap: wrap;
 }
@@ -78,7 +85,7 @@ input[type=time]{
     opacity: 0.9;
     margin-top: 20px;
     font-size: 20px;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 
 .loginbtn:hover {
@@ -92,7 +99,7 @@ input[type=time]{
 #signin {
     text-align: center;
     color: #0F0D0D;
-
+    margin: auto;
 }
 
 a {
@@ -106,4 +113,3 @@ a {
     margin-top: 20px;
     width: 500px;
 }
-

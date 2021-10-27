@@ -29,7 +29,7 @@ export default {
   components: {MenuProduct},
   data () {
     return {
-      title: "Eventos Gastronómicos en Buenos Aires",
+      title: "Gastronomic Events in Buenos Aires",
       products: eventsProducts,
     }
   }
@@ -43,9 +43,7 @@ export default {
   font-family: Montserrat;
   font-size: 60px;
   color: darkcyan;
-  margin-bottom: 50px;
   margin: auto;
-  text-decoration: underline;
 
 }
 
@@ -57,9 +55,9 @@ export default {
 }
 
 iframe {
-  width: 1300px;
-  height: 480px;
-  margin-top: 100px;
+  width: 900px;
+  height: 385px;
+  margin-top: 15px;
 }
 
 </style>

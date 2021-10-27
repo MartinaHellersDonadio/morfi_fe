@@ -2,7 +2,7 @@
   <div>
     <Header v-bind:show-button="false"/>
     <div class="main-section login">
-      <h2 class="title-form"> {{ titleform }}</h2>
+      <h1 id="welcome-text">{{ welcometext }}</h1>
       <p class="description-form"> {{ descriptionform }}</p>
       <hr>
       <form class="input-form">
@@ -37,7 +37,7 @@ export default {
   },
   data () {
     return {
-      titleform: "If you have an account please Sign In",
+      welcometext: "¡Hey, welcome back!",
       descriptionform: "Please fill this form to log in your account",
       email: "",
       password: "",
@@ -45,9 +45,13 @@ export default {
 
     }
   },
+  methods: {
+
+  },
 }
 </script>
 
 <style scoped>
-@import "../assets/css/Forms.css"
+@import "../assets/css/Forms.css";
+
 </style>

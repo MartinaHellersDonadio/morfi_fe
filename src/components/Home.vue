@@ -42,8 +42,10 @@
       </div>
     </div>
 
-
-
+    <div class="fifth-container">
+      <h2 id="ending-phrase"> {{ phrase }}</h2>
+      <img id="bottom-home" src="../assets/img/img_location.png" alt="img bottom home">
+    </div>
   </div>
 </template>
 
@@ -60,6 +62,7 @@ export default {
       icon3: "And enjoy!",
       title2: "About Us",
       description: "We seek to offer a space where diners can easily find, review and reserve the best gastronomic experiences in Buenos Aires. Our main objective is to be able to increase the visualization of those marginalized proposals that, in times of pandemic, seek to strengthen the approach to their clients",
+      phrase: "If you got up to here, we want you to know we are glad you are visiting MORFI",
     }
   },
 }

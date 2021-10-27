@@ -10,30 +10,36 @@
         <hr>
         <form class="input-form">
           <label for="ownersName"><b>Owners Name</b></label>
-          <input type="text"  placeholder="Enter your name" name="ownersName" id="ownersName" tabindex="1" required>
+          <input type="text"  placeholder="Enter your name" v-model="ownerName" id="ownersName" tabindex="1" required>
 
-          <label>Email</label>
+          <label><b>Email</b></label>
           <input type="text" placeholder="Enter Email" v-model="email" required>
 
           <label for=restName><b>Restaurant Name</b></label>
-          <input type="text"  placeholder="Enter your Restaurant Name" name="restaurantName" id="restName" tabindex="2" required>
+          <input type="text"  placeholder="Enter your Restaurant Name" v-model="restaurantName" id="restName" tabindex="2" required>
 
           <label for="heading"><b>What type of restaurant do you have?</b></label>
           <input type="text"  name="typeRestaurant" id="heading" required tabindex="3">
 
           <label for="location"><b>Location</b></label>
-          <input type="text"  placeholder="Location" name="loc" id="location" required tabindex="4">
+          <input type="text"  placeholder="Location" v-model="adress" id="location" required tabindex="4">
 
           <label for="openTime"><b>Open</b></label>
-          <input type="time"  name="opentime" id="openTime" required tabindex="5">
+          <input type="time"  name="openTime" id="openTime" required tabindex="5">
 
           <label for="closeTime"><b>Close</b></label>
-          <input type="time"  name="closetime" id="closeTime" required tabindex="6">
+          <input type="time" name="closeTime" id="closeTime" required tabindex="6">
+
+          <label for="image"><b>Add a photo of the Menu</b></label>
+          <input name="file" type="file" size="2mb"><br/>
 
           <textarea id="description" name="description" class="description" rows="4" cols="50" required maxlength="240"> Write a brief description of your restaurant</textarea>
 
           <button type="submit" class="formbtn">Submit</button>
         </form>
+      </div>
+      <div>
+        <router-link to="/"><button id="button-back">Go back</button></router-link>
       </div>
     </div>
     <div class="subcontainer">
@@ -49,10 +55,19 @@
 export default {
   name: "JoinUs",
   components: {
+  },
+  data () {
+    return {
+      ownerName: "",
+      email: "",
+      restaurantName: "",
+      adress: "",
+
+    }
   }
 }
 </script>
 
 <style scoped>
-@import "../assets/css/JoinUs.css"
+@import "../assets/css/JoinUs.css";
 </style>

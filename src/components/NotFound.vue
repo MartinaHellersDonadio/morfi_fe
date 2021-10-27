@@ -2,6 +2,7 @@
   <div>
     <div id="notfound-container">
       <h1 id="notfound">{{ phrase1 }}<br><span>{{ phrase2 }}</span> {{ phrase3 }}</h1>
+      <router-link to="/"><img src="../assets/img/morfi_logo.png" alt="morfi logo"></router-link>
     </div>
   </div>
 </template>

@@ -5,15 +5,14 @@
     flex-wrap: wrap;
     align-items: center;
     margin: auto;
-    margin-top: 300px;
 }
 
 #notfound {
     font-family: "Montserrat";
     font-weight: 900;
-    font-size: 150px;
+    font-size: 130px;
     display: inline-block;
-    padding-bottom: 20px;
+    padding-bottom: 100px;
 }
 
 span {
