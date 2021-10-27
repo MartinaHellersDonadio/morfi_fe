@@ -4,13 +4,13 @@
     font-size: 60px;
     margin-bottom: 20px;
     color: #E12424;
-    margin-top: 10px;
 }
 
 .main-section{
     font-family: "Montserrat";
     margin: auto;
     width: 650px;
+    margin-top: 200px;
 
 }
 .general-container {
@@ -21,9 +21,7 @@
     margin: auto;
 }
 
-.login {
-    margin-top: 10px;
-}
+
 .title-form{
     text-align: center;
     font-size: 30px;
@@ -39,7 +37,7 @@
 
 .input-form {
     width: 500px;
-    height: 800px;
+    height: 600px;
     padding: 16px;
     margin: auto;
     border-radius: 3px;
@@ -55,7 +53,7 @@ hr {
 }
 
 
-input[type=text], input[type=password]{
+input[type=text], input[type=password], input[type=email]{
     padding: 15px;
     margin: 5px 0 22px 0;
     display: inline-block;

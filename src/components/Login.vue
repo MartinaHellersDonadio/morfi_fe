@@ -5,9 +5,9 @@
       <h1 id="welcome-text">{{ welcometext }}</h1>
       <p class="description-form"> {{ descriptionform }}</p>
       <hr>
-      <form class="input-form">
+      <form class="input-form" method="post" @submit="login()">
           <label>Email</label>
-          <input type="text" placeholder="Enter Email" v-model="email" required>
+          <input type="email" placeholder="Enter Email" v-model="email" required>
 
           <label>Password</label>
           <input type="password" placeholder="Enter Password" v-model="password" required>
@@ -15,7 +15,7 @@
 
           <button type="submit" class="formbtn">Log in</button>
 
-          <p id="signin"> {{ questionlog }} <a href="">Sign Up</a></p>
+          <p id="signin"> {{ questionlog }} <router-link to="/signup">Sign Up</router-link></p>
       </form>
     </div>
     <Footer/>
@@ -46,7 +46,9 @@ export default {
     }
   },
   methods: {
-
+    login() {
+      this.$router.push("/")
+    }
   },
 }
 </script>

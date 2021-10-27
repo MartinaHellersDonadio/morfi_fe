@@ -88,6 +88,7 @@ span {
 
 }
 
+
 .third-container {
     align-content: center;
     display: flex;
@@ -163,9 +164,10 @@ span {
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
+    width: 800px;
 
 }
-#bottom-home {
+#ending-home {
     margin: auto;
     height: 150px;
 }

@@ -5,10 +5,10 @@
     </div>
     <div class="subcontainer">
       <div class="join-main-section">
-        <h2 class="title-form">Do you want your restaurant to appear in "Morfi"? </h2>
-        <p class="description-form">Please fill the form to let us know if you want to join "Morfi".</p>
+        <h2 class="title-form">What are you waiting to join Morfi?</h2>
+        <p class="description-form">Please fill the form to let us know if you want to be part</p>
         <hr>
-        <form class="input-form">
+        <form class="input-form" method="post" @submit="join()">
           <label for="ownersName"><b>Owners Name</b></label>
           <input type="text"  placeholder="Enter your name" v-model="ownerName" id="ownersName" tabindex="1" required>
 
@@ -22,7 +22,7 @@
           <input type="text"  name="typeRestaurant" id="heading" required tabindex="3">
 
           <label for="location"><b>Location</b></label>
-          <input type="text"  placeholder="Location" v-model="adress" id="location" required tabindex="4">
+          <input type="text"  placeholder="Enter the address" v-model="adress" id="location" required tabindex="4">
 
           <label for="openTime"><b>Open</b></label>
           <input type="time"  name="openTime" id="openTime" required tabindex="5">
@@ -64,7 +64,12 @@ export default {
       adress: "",
 
     }
-  }
+  },
+  methods: {
+    join() {
+      this.$router.push("/joinus/joinsuccess")
+    }
+  },
 }
 </script>
 

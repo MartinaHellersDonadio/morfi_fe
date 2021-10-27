@@ -3,7 +3,7 @@
     <h2 class="product-title">{{ name }}</h2>
     <div class="main-subcontainer">
       <div class="section">
-        <img class="product-img" v-bind:src="require('../assets/img/products/' + image)" v-bind:alt="productAlt">
+        <a href="https://www.google.com/maps/d/u/0/embed?mid=1siY21nn9fB8T2CBk_xLZbc6jgzpV7ITz"><img class="product-img" v-bind:src="require('../assets/img/products/' + image)" v-bind:alt="productAlt"></a>
       </div>
       <div class="section text">
           <p class="text-container">{{ description }}</p>
@@ -93,8 +93,8 @@ export default {
 }
 
 .product-img {
-  height: 300px;
-  width: 450px;
+  height: 400px;
+  width: 550px;
   margin: auto;
 }
 

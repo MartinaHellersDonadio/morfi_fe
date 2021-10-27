@@ -9,11 +9,14 @@
         <li><p class="links" @click="$emit('menuEvent', 'events')">{{ section3 }}</p></li>
       </ul>
     </nav>
-    <router-link to="/joinus"><a class="cta" href="#"><button class="button button1">{{ button1 }}</button></a></router-link>
+    <div v-if="showButton1">
+      <router-link to="/joinus"><a class="cta" href="#"><button class="button button1">{{ button1 }}</button></a></router-link>
+    </div>
     <div v-if="showButton">
       <router-link to="/login"><a class="cta" href="#"><button class="button button2">{{ button2 }}</button></a></router-link>
+      <router-link to="/signup"><a class="cta" href="#"><button class="button button3">{{ button3 }}</button></a></router-link>
     </div>
-    <router-link to="/signup"><a class="cta" href="#"><button class="button button3">{{ button3 }}</button></a></router-link>
+
   </header>
 </template>
 
@@ -25,7 +28,11 @@ export default {
     showButton: {
       type: Boolean,
       default: true
-    }
+    },
+    showButton1: {
+      type: Boolean,
+      default: true
+    },
   },
   data () {
     return {

@@ -38,7 +38,7 @@ li, p, button {
     color: whitesmoke;
     text-decoration: none;
     padding: 10px;
-    cursor: pointer;
+
 }
 
 
@@ -63,11 +63,13 @@ li, p, button {
     padding: 0 20px;
     text-transform: uppercase;
     position: relative;
+    cursor: pointer;
 
 }
 
 .nav-links li p {
     transition: all 0.3s ease 0s;
+    cursor: pointer;
 
 }
 
@@ -99,15 +101,17 @@ li, p, button {
     transform: scale(1);
 
 }
-.nav-links li p:hover:active {
+.nav a.router-link-exact-active {
     color: #E12424;
 }
+
 .button {
     padding: 9px 25px;
     border-radius: 50px;
     transition: all 0.3s ease 0s;
     color: whitesmoke;
     margin: 5px;
+    cursor: pointer;
 }
 
 

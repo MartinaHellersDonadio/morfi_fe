@@ -4,20 +4,20 @@
       <div class="footer-container">
         <div class="row">
           <div class="footer-col">
-            <h4>Morfi</h4>
+            <h3>Contact</h3>
+            <h4>We care to know what you think about the experience in Morfi to adjust what does not go so well</h4>
             <ul>
-              <li><router-link to="/home">About Us</router-link></li>
+              <li><a href="mailto:morfi@info.com.ar?Subject=Newsletter">morfi@info.com.ar</a></li>
             </ul>
           </div>
           <div class="footer-col">
-            <h4>Get Help</h4>
+            <h3>Get Help</h3>
             <ul>
               <li><a href="#">FAQ</a></li>
-              <li><a href="#"></a> </li>
             </ul>
           </div>
           <div class="footer-col">
-            <h4>Check our Website</h4>
+            <h3>Check our Website</h3>
             <ul>
               <li><a href="#">Events</a></li>
               <li><a href="#">Restaurants</a></li>
@@ -25,9 +25,10 @@
             </ul>
           </div>
           <div class="footer-col">
-            <h4>Join our newsletter</h4>
-            <input type="email"  v-model="footerEmail" id="footer-email" placeholder="Enter Your Email Address">
-            <button type="submit" class="footer-email-btn">Submit</button>
+            <h3>Join our newsletter</h3>
+            <h4>Find out about our news before anyone else</h4>
+            <input type="email"  v-model="footerEmail" id="footer-email" placeholder="Enter Your Email Address" required>
+            <button type="submit" class="footer-email-btn">Suscribe</button>
           </div>
         </div>
           <p class="footer-bottom">Copyright &copy;2020 MORFI | All rights reserved </p>
