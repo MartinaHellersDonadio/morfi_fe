@@ -1,7 +1,9 @@
 <template>
   <header>
+
     <router-link to="/"><img id="logo" src="../assets/img/morfi_logo.png" alt="Morfi Logo"></router-link>
     <h2 id="title">{{ title }}</h2>
+
     <nav>
       <ul class="nav-links">
         <li><p class="links" @click="$emit('menuEvent', 'home')">{{ section1 }}</p></li>
@@ -9,12 +11,14 @@
         <li><p class="links" @click="$emit('menuEvent', 'events')">{{ section3 }}</p></li>
       </ul>
     </nav>
+
     <div v-if="showButton1">
-      <router-link to="/joinus"><a class="cta" href="#"><button class="button button1">{{ button1 }}</button></a></router-link>
+      <router-link :to="{name: 'Joinus'}"><a class="cta"><button class="button button1">{{ button1 }}</button></a></router-link>
     </div>
+
     <div v-if="showButton">
-      <router-link to="/login"><a class="cta" href="#"><button class="button button2">{{ button2 }}</button></a></router-link>
-      <router-link to="/signup"><a class="cta" href="#"><button class="button button3">{{ button3 }}</button></a></router-link>
+      <router-link :to="{name: 'Login'}"><a class="cta" ><button class="button button2">{{ button2 }}</button></a></router-link>
+      <router-link :to="{name: 'Signup'}"><a class="cta"><button class="button button3">{{ button3 }}</button></a></router-link>
     </div>
 
   </header>

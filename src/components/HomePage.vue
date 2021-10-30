@@ -1,5 +1,6 @@
 <template>
   <div id="homepage">
+
     <div id="home-container">
       <Header v-on:menuEvent="showMenuOption($event)"/>
     </div>
@@ -9,7 +10,9 @@
       <Restaurants v-if="menu.restaurants"/>
       <Events v-if="menu.events"/>
     </div>
-      <Footer/>
+
+    <Footer/>
+
   </div>
 </template>
 
@@ -19,7 +22,6 @@ import Home from "./Home";
 import Footer from "./Footer";
 import Restaurants from "./Restaurants";
 import Events from "./Events";
-
 
 export default {
   name: "HomePage",
@@ -44,7 +46,6 @@ export default {
     showMenuOption(option) {
       let oldOption = this.menu.activeOption;
       this.menu.activeOption = option;
-
       this.menu[oldOption] = false;
       this.menu[this.menu.activeOption] = true;
     }
@@ -53,5 +54,4 @@ export default {
 </script>
 
 <style scoped>
-
 </style>

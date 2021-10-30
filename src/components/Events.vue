@@ -4,7 +4,7 @@
       <h1 id="main-title">{{ title }}</h1>
     </div>
     <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1siY21nn9fB8T2CBk_xLZbc6jgzpV7ITz"></iframe>
-    <div id="events-container">
+    <div>
       <MenuProduct v-for="(product, index) in products" v-bind:key="index"
                     v-bind:name="product.name"
                     v-bind:image="product.image"
@@ -14,6 +14,15 @@
                     v-bind:price="product.price"
       />
     </div>
+    <div id="events-bottom-container">
+      <div class="events-bottom-subcontainer">
+        <h2>Keep updated before anyone else about the next events to come!</h2>
+      </div>
+      <div class="events-bottom-subcontainer">
+        <img id="arrow-events" src="../assets/img/arrow_events.png" alt="arrow down">
+      </div>
+    </div>
+
   </div>
 </template>
 
@@ -50,7 +59,7 @@ export default {
 #principal-container {
   padding-top: 200px;
   text-align: center;
-  margin-bottom: 200px;
+  margin-bottom: 80px;
 
 }
 
@@ -60,4 +69,31 @@ iframe {
   margin-top: 15px;
 }
 
+#events-bottom-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.events-bottom-subcontainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  display: inline-block;
+  width: 500px;
+}
+
+h2 {
+  color: #E12424;
+  text-align: center;
+  font-size: 50px;
+}
+
+#arrow-events {
+  margin-right: 250px;
+}
 </style>
+

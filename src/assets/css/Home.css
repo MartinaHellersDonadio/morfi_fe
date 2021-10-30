@@ -4,13 +4,13 @@
     padding-bottom: 200px;
 }
 
-#first-container {
+.first-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 .subcontainer {
@@ -29,7 +29,7 @@
 }
 
 #img-home {
-    height:  580px;
+    height:  560px;
     width: 850px;
     padding: 5px;
     margin-left: 50px;
@@ -43,14 +43,13 @@ span {
     height: 198px;
     width: 205px;
     padding-top: 20px;
-
 }
 
 .second-container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-bottom:  200px;
+    margin-bottom:  100px;
     flex-wrap: wrap;
     align-items: center;
     margin-top: 100px;
@@ -169,5 +168,5 @@ span {
 }
 #ending-home {
     margin: auto;
-    height: 150px;
+    height: 300px;
 }

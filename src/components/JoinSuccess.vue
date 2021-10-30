@@ -1,22 +1,28 @@
 <template>
   <div>
+
     <Header v-bind:show-button1="false"/>
 
     <div class="success-container">
+
       <div class="success-section">
         <img src="../assets/img/mail_icon.png" alt="mail icon">
       </div>
+
       <div class="success-container">
-        <h1 class="success-text">Thank you!</h1>
+        <h1 class="success-text">Thank you <span id="title-join-success">{{ this.$route.params["clientName"]}}</span>!</h1>
         <h2 class="success-text">We received your information correctly and we will be contacting you via email in the next few hours</h2>
       </div>
+
     </div>
 
     <Footer/>
+
   </div>
 </template>
 
 <script>
+
 
 import Header from "./Header";
 import Footer from "./Footer";
@@ -25,6 +31,7 @@ export default {
   name: "JoinSuccess",
   components: {Footer, Header}
 }
+
 </script>
 
 <style scoped>
@@ -63,5 +70,12 @@ h1 {
 h2 {
   font-size: 30px;
   font-weight: lighter;
+}
+
+#title-join-success {
+  font-family: Montserrat;
+  color: orangered;
+  text-transform: capitalize;
+
 }
 </style>

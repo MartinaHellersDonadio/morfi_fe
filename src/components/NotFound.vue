@@ -1,9 +1,14 @@
 <template>
   <div>
+
     <div id="notfound-container">
+
       <h1 id="notfound">{{ phrase1 }}<br><span>{{ phrase2 }}</span> {{ phrase3 }}</h1>
-      <router-link to="/"><img src="../assets/img/morfi_logo.png" alt="morfi logo"></router-link>
+
+      <router-link :to="{name: 'HomePage'}"><img src="../assets/img/morfi_logo.png" alt="morfi logo"></router-link>
+
     </div>
+
   </div>
 </template>
 
@@ -25,5 +30,25 @@ export default {
 </script>
 
 <style scoped>
-@import "../assets/css/NotFound.css"
+
+#notfound-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: auto;
+}
+
+#notfound {
+  font-family: "Montserrat";
+  font-weight: 900;
+  font-size: 130px;
+  display: inline-block;
+  padding-bottom: 100px;
+}
+
+span {
+  color: gold;
+}
+
 </style>

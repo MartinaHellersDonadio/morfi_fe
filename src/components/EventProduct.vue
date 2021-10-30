@@ -10,10 +10,10 @@
       </div>
 
       <div class="section text">
-          <p class="text-container">{{ description }}</p>
-          <p class="text-time">{{ time }}</p>
-          <a href="https://www.google.com/maps/d/u/0/embed?mid=1siY21nn9fB8T2CBk_xLZbc6jgzpV7ITz"><p class="text-location">{{ location }}</p></a>
-          <p class="text-price">{{ price }}</p>
+        <p class="text-container">{{ description }}</p>
+        <p class="text-time">{{ time }}</p>
+        <a href="https://www.google.com/maps/d/u/0/embed?mid=1siY21nn9fB8T2CBk_xLZbc6jgzpV7ITz"><p class="text-location">{{ location }}</p></a>
+        <p class="text-price">{{ price }}</p>
       </div>
 
     </div>
@@ -22,7 +22,7 @@
 
 <script>
 export default {
-  name: "MenuProduct",
+  name: "EventProduct",
   props: [
     "name",
     "image",

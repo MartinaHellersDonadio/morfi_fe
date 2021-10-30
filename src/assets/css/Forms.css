@@ -22,10 +22,10 @@
 }
 
 
-.title-form{
+.tittle-form{
     text-align: center;
     font-size: 30px;
-    color: #0F0D0D;
+    color: #24262b;
     margin-bottom: 20px;
 }
 
@@ -110,4 +110,11 @@ a {
     border-radius: 3px;
     margin-top: 20px;
     width: 500px;
+}
+
+#free {
+    color: whitesmoke;
+    background-color: limegreen;
+    border-radius: 10px;
+    font-size: 40px;
 }

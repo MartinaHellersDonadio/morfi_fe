@@ -1,10 +1,14 @@
 <template>
   <div>
+
     <Header v-bind:show-button="false"/>
+
     <div class="main-section login">
+
       <h1 id="welcome-text">{{ welcometext }}</h1>
       <p class="description-form"> {{ descriptionform }}</p>
       <hr>
+
       <form class="input-form" method="post" @submit="login()">
           <label>Email</label>
           <input type="email" placeholder="Enter Email" v-model="email" required>
@@ -15,10 +19,13 @@
 
           <button type="submit" class="formbtn">Log in</button>
 
-          <p id="signin"> {{ questionlog }} <router-link to="/signup">Sign Up</router-link></p>
+          <p id="signin"> {{ questionlog }} <router-link :to="{name: 'Signup'}">Sign Up</router-link></p>
       </form>
+
     </div>
+
     <Footer/>
+
   </div>
 </template>
 

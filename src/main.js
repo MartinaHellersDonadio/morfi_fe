@@ -11,6 +11,7 @@ import Signup from "./components/Signup";
 import NotFound from "./components/NotFound";
 import JoinUs from "./components/JoinUs";
 import JoinSuccess from "./components/JoinSuccess";
+import Faqs from "./components/Faqs";
 
 
 
@@ -21,6 +22,7 @@ const routes = [
   { path: '/signup', name: "Signup", component: Signup},
   { path: '/joinus/joinsuccess', name: "JoinSuccess", component: JoinSuccess},
   { path: '*', component: NotFound },
+  { path:  '/faqs', name: "Faqs", component: Faqs},
 
 ]
 
