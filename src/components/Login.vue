@@ -10,9 +10,9 @@
       <hr>
 
       <form class="input-form" novalidate @submit.prevent="login()">
-          <input type="email" :class="`form-control ${errors.email ? 'is-invalid' : ''}`" placeholder="Enter Email" v-model="email" required>
+          <input type="text" :class="`form-control ${errors.username ? 'is-invalid' : ''}`" placeholder="Enter Username" v-model="username" required>
 
-          <div class="invalid-feedback">{{ errors.email }}</div>
+          <div class="invalid-feedback">{{ errors.username }}</div>
 
           <input type="password" :class="`form-control ${errors.password ? 'is-invalid' : ''}`" placeholder="Enter Password" v-model="password" required>
 
@@ -48,7 +48,7 @@ export default {
   },
   data () {
     return {
-      email: "",
+      username: "",
       password: "",
       errors: {},
       welcometext: "¡Hey, welcome back!",
@@ -59,7 +59,7 @@ export default {
   methods: {
     login() {
       let credentials = {
-        email: this.email,
+        username: this.username,
         password: this.password,
       };
 
@@ -72,18 +72,18 @@ export default {
         //login code goes here
         let IsUsers = sessionStorage.users;
         IsUsers = JSON.parse(IsUsers);
-        let emailIndex = IsUsers.findIndex(
-            (user) => user.email === credentials.email
+        let usernameIndex = IsUsers.findIndex(
+            (user) => user.username === credentials.username
         );
 
-        if(emailIndex > -1) {
+        if(usernameIndex > -1) {
           let passwordIndex = IsUsers.findIndex(
               (user) => user.password === credentials.password
           );
 
           if(passwordIndex > -1) {
             let activeUser = IsUsers.find(
-                (user) => user.email === credentials.email
+                (user) => user.username === credentials.username
             );
             sessionStorage.setItem('activeUser', JSON.stringify(activeUser));
             this.$router.push('/');
@@ -91,7 +91,7 @@ export default {
             this.errors.password = "Password does not match!";
           }
         } else {
-          this.errors.email = "Email does not exist!";
+          this.errors.username = "Username does not exist!";
         }
       }
     },

@@ -29,14 +29,18 @@
           <label><b>Location</b></label>
           <input type="text"  placeholder="Enter the address" v-model="address" id="location" required tabindex="4">
 
+          <br>
+
           <label><b>Open</b></label>
           <input type="time"  name="openTime" id="openTime" required tabindex="5">
 
           <label><b>Close</b></label>
           <input type="time" name="closeTime" id="closeTime" required tabindex="6">
 
+          <hr>
+
           <label><b>Add a photo of the Menu</b></label>
-          <input name="file" type="file" size="2mb"><br/>
+          <input name="file" type="file" size="2mb">
 
           <textarea id="description" name="description" class="description" rows="4" cols="50" required maxlength="240"> Write a brief description of your restaurant</textarea>
 

@@ -3,11 +3,11 @@ import validator from 'validator';
 const validateSignUp = (data) => {
     let errors = {};
 
-    const { email, password } = data;
+    const { username, password } = data;
 
 
-    if (validator.isEmpty(email)) {
-        errors.email = "Email field is required";
+    if (validator.isEmpty(username)) {
+        errors.username = "Username field is required";
     }
 
     if (validator.isEmpty(password)) {

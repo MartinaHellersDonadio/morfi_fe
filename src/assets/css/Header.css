@@ -20,6 +20,7 @@ header {
     z-index:200;
     flex-wrap: wrap;
     flex-shrink: 1;
+    padding: 10px;
 }
 
 #title {
@@ -144,11 +145,13 @@ li, p, button {
 
 .button4 {
     color: darkgray;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: bolder;
     cursor: pointer;
     background-color: transparent;
     border-color: transparent;
+    padding: 0;
+
 }
 
 .button4:hover {
@@ -157,4 +160,20 @@ li, p, button {
 
 .router-link-active {
     color: red;
+}
+
+.logout {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: center;
+    margin: auto;
+    margin-left: 200px;
+}
+
+
+#logout-id {
+    width: 55px;
+    height: 55px;
+
 }
