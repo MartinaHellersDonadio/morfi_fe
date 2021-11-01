@@ -158,10 +158,6 @@ li, p, button {
     color: #E12424;
 }
 
-.router-link-active {
-    color: red;
-}
-
 .logout {
     display: flex;
     flex-wrap: wrap;

@@ -12,6 +12,7 @@ import NotFound from "./components/NotFound";
 import JoinUs from "./components/JoinUs";
 import JoinSuccess from "./components/JoinSuccess";
 import Faqs from "./components/Faqs";
+import SuscribeSuccess from "./components/SuscribeSuccess";
 
 
 
@@ -23,7 +24,7 @@ const routes = [
   { path: '/joinus/joinsuccess', name: "JoinSuccess", component: JoinSuccess},
   { path: '*', component: NotFound },
   { path:  '/faqs', name: "Faqs", component: Faqs},
-
+  { path: '/suscribesuccess', name: "SuscribeSuccess", component: SuscribeSuccess}
 ]
 
 const router = new VueRouter( {
