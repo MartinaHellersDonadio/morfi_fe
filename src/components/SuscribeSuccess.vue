@@ -1,6 +1,7 @@
 <template>
   <div class="container">
     <div class="text">
+      <img id="tick-gif" src="../assets/img/tick_gif.gif" alt="tick gif">
       <h2>{{ titlesubscribe }}</h2><br>
     </div>
     <div class="text">
@@ -38,7 +39,12 @@ export default {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  margin-top: 250px;
+  margin-top: 100px;
+}
+
+#tick-gif {
+  height: 150px;
+  width: 150px;
 }
 
 .text{
@@ -69,6 +75,6 @@ p {
 }
 
 .back-btn:hover{
-  background-color: #8FC460;
+  background-color: #b1b1b1;
 }
 </style>
