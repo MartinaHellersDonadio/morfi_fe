@@ -5,6 +5,7 @@ const validateSignUp = (data) => {
 
     const { email, password } = data;
 
+
     if (validator.isEmpty(email)) {
         errors.email = "Email field is required";
     }
