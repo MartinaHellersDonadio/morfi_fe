@@ -142,6 +142,19 @@ li, p, button {
     margin-right: 20px;
 }
 
+.button4 {
+    color: darkgray;
+    font-size: 30px;
+    font-weight: bolder;
+    cursor: pointer;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.button4:hover {
+    color: #E12424;
+}
+
 .router-link-active {
     color: red;
 }

@@ -16,10 +16,18 @@
       <router-link :to="{name: 'Joinus'}"><a class="cta"><button class="button button1">{{ button1 }}</button></a></router-link>
     </div>
 
-    <div v-if="showButton">
+    <div v-if="!user">
       <router-link :to="{name: 'Login'}"><a class="cta" ><button class="button button2">{{ button2 }}</button></a></router-link>
+    </div>
+
+    <div v-if="!user">
       <router-link :to="{name: 'Signup'}"><a class="cta"><button class="button button3">{{ button3 }}</button></a></router-link>
     </div>
+
+    <div v-if="user">
+      <a class="cta" href=""><button class="button4">{{ button4 }}</button></a>
+    </div>
+
 
   </header>
 </template>
@@ -47,10 +55,17 @@ export default {
       button1: "Do you have a restaurant?",
       button2: "Log in",
       button3: "Sign up",
-    }
+      user: "",
+      button4: "Log out",
+    };
   },
-  methods: {},
-}
+  mounted() {
+    if(sessionStorage.activeUser) {
+      let activeUser = sessionStorage.activeUser;
+      this.user = JSON.parse(activeUser);
+    }
+  }
+};
 </script>
 
 <style scoped>

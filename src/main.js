@@ -14,10 +14,9 @@ import JoinSuccess from "./components/JoinSuccess";
 import Faqs from "./components/Faqs";
 
 
-
 const routes = [
   { path: '/', name: "HomePage", component: HomePage },
-  {path: '/joinus', name: "Joinus", component: JoinUs},
+  { path: '/joinus', name: "Joinus", component: JoinUs},
   { path: '/login', name: "Login", component: Login},
   { path: '/signup', name: "Signup", component: Signup},
   { path: '/joinus/joinsuccess', name: "JoinSuccess", component: JoinSuccess},

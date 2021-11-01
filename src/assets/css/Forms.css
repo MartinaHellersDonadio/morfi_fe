@@ -5,7 +5,13 @@
     margin-bottom: 20px;
     color: #E12424;
 }
+.form-control {
 
+}
+
+.invalid-feedback {
+    color: red;
+}
 .main-section{
     font-family: "Montserrat";
     margin: auto;
