@@ -34,9 +34,11 @@
 
           <label><b>Close</b></label>
           <input type="time" name="closeTime" id="closeTime" required tabindex="6">
+          <br>
 
           <label><b>Add a photo of the Menu</b></label>
-          <input name="file" type="file" size="2mb"><br/>
+          <input name="file" type="file" size="2mb">
+          <br>
 
           <textarea id="description" name="description" class="description" rows="4" cols="50" required maxlength="240"> Write a brief description of your restaurant</textarea>
 
