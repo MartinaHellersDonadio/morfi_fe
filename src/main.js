@@ -24,7 +24,7 @@ const routes = [
   { path: '/joinus/joinsuccess', name: "JoinSuccess", component: JoinSuccess},
   { path: '*', component: NotFound },
   { path:  '/faqs', name: "Faqs", component: Faqs},
-  { path: '/suscribesuccess', name: "SuscribeSuccess", component: SuscribeSuccess}
+  { path: '/suscribesuccess', name: "SuscribeSuccess", component: SuscribeSuccess},
 ]
 
 const router = new VueRouter( {

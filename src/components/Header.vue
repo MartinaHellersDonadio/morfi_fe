@@ -30,7 +30,7 @@
       </div>
 
       <div class="logout-subsection">
-        <a class="cta" href="" @click.prevent="logout()"><button class="button4">{{ button4 }}</button></a>
+        <a class="cta" href="" @click.prevent="logout()" @click="alert()"><button class="button4">{{ button4 }}</button></a>
       </div>
 
     </div>
@@ -78,6 +78,9 @@ export default {
       this.$router.push('/');
       window.location.reload();
     },
+    alert() {
+      alert("Se ha cerrado sesión correctamente!");
+    }
   },
 };
 </script>
