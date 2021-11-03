@@ -4,14 +4,17 @@
     <div class="restaurant">
       <div class="image-wrap">
         <img class="image" v-bind:src="require('../assets/img/products/' + image)" v-bind:alt="productAlt">
-        <div class="text-image">Look into it</div>
+        <div class="text-image">Look into it!</div>
       </div>
 
     </div>
 
     <div class="restaurant text">
+        <p class="category">{{ category }}</p>
         <h1>{{ name }}</h1>
         <p>{{ location }}</p>
+        <p>{{ price }}</p>
+        <p class="discount">{{ discount }}</p>
     </div>
 
   </div>
@@ -21,6 +24,7 @@
 export default {
   name: "RestaurantProduct",
   props: [
+    "category",
     "name",
     "image",
     "location",
@@ -32,7 +36,6 @@ export default {
       productAlt: "Restaurant Photo",
     }
   },
-
 }
 </script>
 
@@ -48,6 +51,8 @@ export default {
   justify-content: space-around;
   align-items: center;
   margin-top: 30px;
+  margin-right: 200px;
+  margin-left: 200px;
 }
 
 .restaurant {
@@ -59,9 +64,20 @@ export default {
   vertical-align: middle;
 }
 
+h1 {
+  margin-bottom: 20px;
+}
+
+.category {
+  font-size: 20px;
+  color: #E12424;
+  font-weight: lighter;
+
+}
+
 .text {
-  margin-top: 100px;
-  max-width: 400px;
+  margin-top: ;
+  max-width: 500px;
 }
 
 image {
@@ -107,6 +123,13 @@ p {
   filter: blur(5px);
   filter: brightness(0.5);
   cursor: pointer;
+}
+
+.discount {
+  font-size: 40px;
+  color: green;
+  margin: auto;
+  margin-top: 10px;
 }
 
 </style>

@@ -13,7 +13,7 @@ import JoinUs from "./components/JoinUs";
 import JoinSuccess from "./components/JoinSuccess";
 import Faqs from "./components/Faqs";
 import SuscribeSuccess from "./components/SuscribeSuccess";
-
+import BondiBar from "./components/BondiBar";
 
 
 const routes = [
@@ -25,6 +25,7 @@ const routes = [
   { path: '*', component: NotFound },
   { path:  '/faqs', name: "Faqs", component: Faqs},
   { path: '/suscribesuccess', name: "SuscribeSuccess", component: SuscribeSuccess},
+  { path: '/bondibar', name: "BondiBar", component: BondiBar},
 ]
 
 const router = new VueRouter( {
