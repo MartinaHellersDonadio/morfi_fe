@@ -11,6 +11,9 @@
 
       <form class="input-form" novalidate @submit.prevent="signup()">
 
+        <input type="text" :class="`form-control ${errors.username ? 'is-invalid' : ''}`" placeholder="Enter Your Username" v-model="username" id="username" required>
+
+        <div class="invalid-feedback">{{ errors.username }}</div>
 
         <input type="email" :class="`form-control ${errors.email ? 'is-invalid' : ''}`" placeholder="Enter Email" v-model="email" id="email" required>
 
@@ -56,6 +59,7 @@ export default {
   },
   data () {
     return {
+      username: "",
       email: "",
       password: "",
       password2: "",
@@ -68,6 +72,7 @@ export default {
   methods: {
     signup() {
       let user = {
+        username: this.username,
         email: this.email,
         password: this.password,
         password2: this.password2,
@@ -85,6 +90,7 @@ export default {
         }
         this.users.push(user);
         sessionStorage.setItem('users', JSON.stringify(this.users));
+        this.username = "";
         this.email = "";
         this.password = "";
         this.password2 = "";

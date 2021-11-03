@@ -24,8 +24,15 @@
       <router-link :to="{name: 'Signup'}"><a class="cta"><button class="button button3">{{ button3 }}</button></a></router-link>
     </div>
 
-    <div v-if="user">
-      <a class="cta" href=""><button class="button4">{{ button4 }}</button></a>
+    <div class="logout" v-if="user">
+      <div class="logout-subsection">
+        <img id="logout-id" src="../assets/img/login_icon.png" alt="login icon">
+      </div>
+
+      <div class="logout-subsection">
+        <a class="cta" href="" @click.prevent="logout()" @click="alert()"><button class="button4">{{ button4 }}</button></a>
+      </div>
+
     </div>
 
 
@@ -64,7 +71,17 @@ export default {
       let activeUser = sessionStorage.activeUser;
       this.user = JSON.parse(activeUser);
     }
-  }
+  },
+  methods: {
+    logout(){
+      sessionStorage.removeItem('activeUser');
+      this.$router.push('/');
+      window.location.reload();
+    },
+    alert() {
+      alert("Se ha cerrado sesión correctamente!");
+    }
+  },
 };
 </script>
 

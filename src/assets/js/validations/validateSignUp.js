@@ -3,15 +3,19 @@ import validator from 'validator';
 const validateSignUp = (data) => {
     let errors = {};
 
-        const {email, password, password2} = data;
+        const {username, email, password, password2} = data;
 
         if(sessionStorage.users) {
             let IsUsers = sessionStorage.users;
             IsUsers = JSON.parse(IsUsers);
-            let index = IsUsers.findIndex (user => user.email === email)
+            let index = IsUsers.findIndex (user => user.username === username)
             if(index > -1) {
-                errors.email = "Email already registred!";
+                errors.username = "Username already exists!";
             }
+        }
+
+        if (validator.isEmpty(username)) {
+            errors.username = "Username field is required";
         }
 
         if (!validator.isEmail(email)) {

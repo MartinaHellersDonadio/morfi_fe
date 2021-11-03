@@ -42,6 +42,53 @@ const eventsProducts = [
         price: "Free entrance",
     },
 ]
+
+const restaurantProducts = [
+    {
+        name: "Bondi Stop Bar",
+        image: "bondi_img.jpg",
+        location: "Av. Cnel. Niceto Vega 5976, C1414 Ciudad Capital, Buenos Aires",
+        price: "",
+        discount: "",
+    },
+    {
+        name: "Naturaleza Sabia",
+        image: "naturaleza_sabia.jpg",
+        location:  "Balcarce 958, C1064 AAT, Buenos Aires",
+        price: "",
+        discount: "",
+    },
+    {
+        name: 'D´oro Italian Bar',
+        image: "italian_bar.jpg",
+        location:  "Perú 159, C1067AAC CABA",
+        price: "",
+        discount: "",
+    },
+    {
+        name: "Punto Sushi",
+        image: "punto_sushi.jpg",
+        location:  "Alsina 875, San Isidro, Provincia de Buenos Aires",
+        price: "",
+        discount: "",
+    },
+    {
+        name: "Boca de Toro",
+        image: "boca_toro.jpg",
+        location:  "Paraguay 685 C1057AAG, C1057 CABA",
+        price: "",
+        discount: "",
+    },
+    {
+        name: "Parilla El Chavo",
+        image: "el_chavo.jpg",
+        location:  "Av. Costanera Rafael Obligado 1221, Buenos Aires",
+        price: "",
+        discount: "",
+    },
+]
+
 export {
     eventsProducts,
+    restaurantProducts,
 };

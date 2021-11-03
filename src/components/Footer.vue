@@ -23,8 +23,10 @@
           <div class="footer-col">
             <h3> {{ title3 }}</h3>
             <h4> {{ description3 }}</h4>
-            <input type="email"  v-model="footerEmail" id="footer-email" placeholder="Enter Your Email Address" required>
-            <button type="submit" class="footer-email-btn">Suscribe</button>
+            <form method="post" @submit="suscribe()">
+              <input type="email"  v-model="footerEmail" id="footer-email" placeholder="Enter Your Email Address" required>
+              <button type="submit" class="footer-email-btn">Suscribe</button>
+            </form>
           </div>
 
         </div>
@@ -50,7 +52,12 @@ export default {
       description3: "Find out about our news before anyone else",
       copyRight: "@ Copyright 2020 MORFI | All rights reserved ",
     }
-  }
+  },
+  methods: {
+    suscribe() {
+      this.$router.push({name: "SuscribeSuccess"})
+    }
+  },
 }
 </script>
 

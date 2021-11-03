@@ -16,7 +16,7 @@
     </div>
     <div id="events-bottom-container">
       <div class="events-bottom-subcontainer">
-        <h2>Keep updated before anyone else about the next events to come!</h2>
+        <h2>{{ titleupdates }}</h2>
       </div>
       <div class="events-bottom-subcontainer">
         <img id="arrow-events" src="../assets/img/arrow_events.png" alt="arrow down">
@@ -38,7 +38,8 @@ export default {
   components: {MenuProduct},
   data () {
     return {
-      title: "Gastronomic Events in Buenos Aires",
+      title: "Get to know the most important Gastronomic Events in Buenos Aires!",
+      titleupdates: "Keep updated before anyone else about the next events to come!",
       products: eventsProducts,
     }
   }
@@ -50,7 +51,7 @@ export default {
 #main-title {
   text-align: center;
   font-family: Montserrat;
-  font-size: 60px;
+  font-size: 50px;
   color: darkcyan;
   margin: auto;
 
