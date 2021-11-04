@@ -7,11 +7,11 @@
       <div class="sub-intro">
 
         <div class="intro-container">
-          <p id="category">{{ category }}</p>
-          <h1 id="title">{{ title }}</h1>
+          <p id="category">{{ bondirestaurant["category"] }}</p>
+          <h1 id="title">{{ bondirestaurant["name"] }}</h1>
           <div class="location-container">
             <div class="location-subcontainer">
-              <p id="location">{{ location }}</p>
+              <p id="location">{{ bondirestaurant["location"] }}</p>
 
               <div class="location-subcontainer">
                 <a href="https://www.google.com/maps/place/Bondi+Stop+Bar/@-34.5839651,-58.4434392,17z/data=!3m1!4b1!4m5!3m4!1s0x95bcb5f87a385537:0xfd3132b1f2b7da37!8m2!3d-34.5839651!4d-58.4434392">
@@ -27,7 +27,7 @@
             <p class="subclasificacion star">★</p>
             <p class="subclasificacion star">★</p>
             <p class="subclasificacion star">★</p>
-            <p class="subclasificacion" >★</p>
+            <p class="subclasificacion star" >★</p>
           </div>
 
         </div>
@@ -64,11 +64,11 @@
       <div class="details-subcontainer">
         <h2>Details</h2>
         <h4>Price range</h4>
-        <p class="info">{{ price }} </p>
+        <p class="info">{{ bondirestaurant["price"] }} </p>
         <h4>Cuisine</h4>
-        <p class="info">{{ cuisine }}</p>
+        <p class="info">{{ bondirestaurant["cuisine"] }}</p>
         <h4>Special Diets</h4>
-        <p class="info">{{ special }}</p>
+        <p class="info">{{ bondirestaurant["special"] }}</p>
       </div>
 
       <div class="details-subcontainer">
@@ -93,10 +93,9 @@
 
       <div class="details-subcontainer">
         <h2>Opening Times</h2>
-        <p class="info">Open <span>from Wednesday to Monday</span></p>
-        <p class="info">From <span>17:00 to 00:00</span></p>
+        <p class="info">{{ bondirestaurant["time"] }}</p>
         <h2>Public transport</h2>
-        <span>Bus lines 140, 108, 151, 168, 39</span>
+        <span>{{ bondirestaurant["transport"]}}</span>
       </div>
     </div>
 
@@ -126,20 +125,18 @@
 import Header from "../Header";
 import Footer from "../Footer";
 
+import products from '../../assets/js/products';
+
+
 export default {
   name: "BondiBar",
   components: {Footer, Header},
   data () {
     return {
+      bondirestaurant: products.restaurantProducts[0],
       user: "",
-      category: "AMERICAN • FOR FRIENDS",
-      title: "Bondi Stop Bar",
-      location: "Niceto Vega 5976, C1414 Buenos Aires",
       mapa: "see map",
       button1: "Reserve your table",
-      price: "ARS 600 - ARS 1500",
-      cuisine: "Grill, Steakhouse, Bacon Burger, Barbecue",
-      special: "Vegetarian options",
       button2: "Review",
     }
   },
@@ -345,6 +342,4 @@ h4 {
   margin-left: 100px;
   color: #8FC460;
 }
-
-
 </style>

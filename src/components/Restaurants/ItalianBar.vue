@@ -1,10 +1,158 @@
 <template>
+  <div>
+    <Header/>
 
+    <div class="general-intro">
+
+      <div class="sub-intro">
+
+        <div class="intro-container">
+          <p id="category">{{ bondirestaurant["category"] }}</p>
+          <h1 id="title">{{ bondirestaurant["name"] }}</h1>
+          <div class="location-container">
+            <div class="location-subcontainer">
+              <p id="location">{{ bondirestaurant["location"] }}</p>
+
+              <div class="location-subcontainer">
+                <a href="https://goo.gl/maps/MueVMSKfBaQZSrmNA">
+                  <p id="view-map">{{ mapa }}</p>
+                </a>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="clasificacion">
+            <p class="subclasificacion star">★</p>
+            <p class="subclasificacion star">★</p>
+            <p class="subclasificacion star">★</p>
+            <p class="subclasificacion star">★</p>
+            <p class="subclasificacion" >★</p>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="sub-intro">
+        <div v-if="!user">
+          <router-link :to="{name: 'Signup'}" @click.native="scrollToTop"><button class="reserve-button">{{ button1 }}</button></router-link>
+        </div>
+
+        <div v-if="user">
+          <a class="cta" href="" @click.prevent="reserve()"><button class="reserve-button">{{ button1 }}</button></a>
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class="img-container">
+      <div class="subcontainer">
+        <img class="image" src="../../assets/img/products/el_chavo.jpg" alt="bondi menu">
+      </div>
+
+      <div class="subcontainer">
+        <img class="image" src="../../assets/img/products/el_chavo2.jpg" alt="bondi location">
+      </div>
+
+      <div class="subcontainer">
+        <img class="image" src="../../assets/img/products/el_chavo3.jpg" alt="bondi menu">
+      </div>
+    </div>
+
+    <div class="details-container">
+      <div class="details-subcontainer">
+        <h2>Details</h2>
+        <h4>Price range</h4>
+        <p class="info">{{ bondirestaurant["price"] }} </p>
+        <h4>Cuisine</h4>
+        <p class="info">{{ bondirestaurant["cuisine"] }}</p>
+        <h4>Special Diets</h4>
+        <p class="info">{{ bondirestaurant["special"] }}</p>
+      </div>
+
+      <div class="details-subcontainer">
+        <h2>Ratings</h2>
+        <h4>Food</h4>
+        <div class="clasificacion">
+          <p class="subclasificacion circle">●</p>
+          <p class="subclasificacion circle">●</p>
+          <p class="subclasificacion circle">●</p>
+          <p class="subclasificacion circle">●</p>
+          <p class="subclasificacion" >●</p>
+        </div>
+        <h4>Service</h4>
+        <div class="clasificacion">
+          <p class="subclasificacion circle">●</p>
+          <p class="subclasificacion circle">●</p>
+          <p class="subclasificacion circle">●</p>
+          <p class="subclasificacion">●</p>
+          <p class="subclasificacion">●</p>
+        </div>
+      </div>
+
+      <div class="details-subcontainer">
+        <h2>Opening Times</h2>
+        <p class="info">{{ bondirestaurant["time"] }}</p>
+        <h2>Public transport</h2>
+        <span>{{ bondirestaurant["transport"]}}</span>
+      </div>
+    </div>
+
+    <div class="general-intro">
+      <div class="sub-intro">
+        <h2 id="title-review"> | Comments & Reviews</h2>
+      </div>
+      <div class="sub-intro">
+        <div v-if="!user">
+          <router-link :to="{name: 'Signup'}" @click.native="scrollToTop"><button class="review-button">{{ button2 }}</button></router-link>
+        </div>
+
+        <div v-if="user">
+          <a class="cta" href="" @click.prevent="review()"><button class="review-button">{{ button2 }}</button></a>
+        </div>
+      </div>
+    </div>
+
+    <Footer/>
+
+  </div>
 </template>
 
 <script>
+import Header from "../Header";
+import Footer from "../Footer";
+import products from "../../assets/js/products";
+
 export default {
-  name: "ItalianBar"
+  name: "ItalianBar",
+  components: {Header, Footer},
+  data () {
+    return {
+      bondirestaurant: products.restaurantProducts[3],
+      user: "",
+      mapa: "see map",
+      button1: "Reserve your table",
+      button2: "Review",
+    }
+  },
+  mounted() {
+    if(sessionStorage.activeUser) {
+      let activeUser = sessionStorage.activeUser;
+      this.user = JSON.parse(activeUser);
+    }
+  },
+  methods: {
+    review() {
+      this.$router.push('/reviewform')
+    },
+    reserve() {
+      this.$router.push('/reserveform')
+    },
+    scrollToTop() {
+      window.scrollTo(0,0);
+    },
+  }
 }
 </script>
 

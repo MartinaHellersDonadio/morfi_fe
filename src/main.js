@@ -14,6 +14,7 @@ import JoinSuccess from "./components/JoinSuccess";
 import Faqs from "./components/Faqs";
 import SuscribeSuccess from "./components/SuscribeSuccess";
 import BondiBar from "./components/Restaurants/BondiBar";
+import ElChavo from "./components/Restaurants/ElChavo";
 import ReviewForm from "./components/ReviewForm";
 import ReserveForm from "./components/ReserveForm";
 import Reviews from "./components/Reviews";
@@ -30,6 +31,7 @@ const routes = [
   { path:  '/faqs', name: "Faqs", component: Faqs},
   { path: '/suscribesuccess', name: "SuscribeSuccess", component: SuscribeSuccess},
   { path: '/bondibar', name: "BondiBar", component: BondiBar},
+  { path: '/elchavo', name: "ElChavo", component: ElChavo},
   { path: '/reviewform', name: "ReviewForm", component: ReviewForm},
   { path: '/reserve', name: "ReserveForm", component: ReserveForm},
   { path: '/reviews', name: "Reviews", component: Reviews},

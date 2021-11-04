@@ -49,6 +49,11 @@ const restaurantProducts = [
         name: "Bondi Stop Bar",
         image: "bondi_img.jpg",
         location: "Av. Cnel. Niceto Vega 5976, C1414 Ciudad Capital, Buenos Aires",
+        price: "ARS 600 - ARS 1500",
+        cuisine: "Grill, Steakhouse, Bacon Burger, Barbecue",
+        special:"Vegetarian options",
+        time: "Open from Wednesday to Monday From 17:00 to 00:00 ",
+        transport: "Bus lines 140, 108, 151, 168, 39",
 
     },
     {
@@ -56,8 +61,9 @@ const restaurantProducts = [
         name: "Naturaleza Sabia",
         image: "naturaleza_sabia.jpg",
         location:  "Balcarce 958, C1064 AAT, Buenos Aires",
-        price: "Price average $500",
-        discount: "",
+        price: "",
+        cuisine: "",
+        special:"",
 
     },
     {
@@ -65,8 +71,11 @@ const restaurantProducts = [
         name: "Parilla El Chavo",
         image: "el_chavo.jpg",
         location:  "Av. Costanera Rafael Obligado 1221, Buenos Aires",
-        price: "Price average $500",
-        discount: "",
+        price: "ARS 500 - ARS 900",
+        cuisine: "Grill, Steakhouse, Bacon Burger, Barbecue",
+        special:"Vegetarian options",
+        time: "Open from Monday to Sunday From 11:00 to 00:00 ",
+        transport: "Bus lines 33, 37",
 
     },
     {
@@ -74,8 +83,9 @@ const restaurantProducts = [
         name: 'D´oro Italian Bar',
         image: "italian_bar.jpg",
         location:  "Perú 159, C1067AAC CABA",
-        price: "Price average $2400",
-        discount: "-30%",
+        price: "",
+        cuisine: "",
+        special:"",
 
     },
     {
@@ -83,8 +93,9 @@ const restaurantProducts = [
         name: "Punto Sushi",
         image: "punto_sushi.jpg",
         location:  "Alsina 875, San Isidro, Provincia de Buenos Aires",
-        price: "Price average $750",
-        discount: "-30%",
+        price: "",
+        cuisine: "",
+        special:"",
 
     },
     {
@@ -92,14 +103,15 @@ const restaurantProducts = [
         name: "Boca de Toro",
         image: "boca_toro.jpg",
         location:  "Paraguay 685 C1057AAG, C1057 CABA",
-        price: "Price average $2000",
-        discount: "",
+        price: "",
+        cuisine: "",
+        special:"",
 
     },
 
 ]
 
-export {
+export default {
     eventsProducts,
     restaurantProducts,
 };

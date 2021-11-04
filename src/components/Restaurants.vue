@@ -19,7 +19,7 @@
 
       <div class="subcontainer">
         <div class="image-wrapper">
-          <img class="image" src="../assets/img/products/el_chavo.jpg" alt="bondi location">
+          <router-link to="/ElChavo"><img class="image" src="../assets/img/products/el_chavo.jpg" alt="bondi location"></router-link>
           <div class="text-image">Look into it!</div>
         </div>
         <h1 class="name">Parilla El Chavo</h1>

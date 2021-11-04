@@ -30,7 +30,7 @@
 
 
 import MenuProduct from "./MenuProduct";
-import {eventsProducts} from "../assets/js/products";
+import products from "../assets/js/products";
 
 
 export default {
@@ -40,7 +40,7 @@ export default {
     return {
       title: "Get to know the most important Gastronomic Events in Buenos Aires!",
       titleupdates: "Keep updated before anyone else about the next events to come!",
-      products: eventsProducts,
+      products: products.eventsProducts,
     }
   }
 }
