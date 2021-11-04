@@ -49,8 +49,6 @@ const restaurantProducts = [
         name: "Bondi Stop Bar",
         image: "bondi_img.jpg",
         location: "Av. Cnel. Niceto Vega 5976, C1414 Ciudad Capital, Buenos Aires",
-        price: "Price average $1000",
-        discount: "-20%",
 
     },
     {

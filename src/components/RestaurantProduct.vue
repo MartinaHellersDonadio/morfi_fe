@@ -4,7 +4,7 @@
     <div class="restaurant">
       <div class="image-wrap">
         <img class="image" v-bind:src="require('../assets/img/products/' + image)" v-bind:alt="productAlt">
-        <div class="text-image">Look into it!</div>
+        <a class="cta" href=""><div class="text-image">Look into it!</div></a>
       </div>
 
     </div>

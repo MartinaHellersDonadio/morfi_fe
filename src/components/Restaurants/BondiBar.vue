@@ -34,7 +34,13 @@
       </div>
 
       <div class="sub-intro">
-        <button id="reserve-button">{{ button1 }}</button>
+        <div v-if="!user">
+          <router-link :to="{name: 'Signup'}" @click.native="scrollToTop"><button class="reserve-button">{{ button1 }}</button></router-link>
+        </div>
+
+        <div v-if="user">
+          <a class="cta" href="" @click.prevent="reserve()"><button class="reserve-button">{{ button1 }}</button></a>
+        </div>
       </div>
 
     </div>
@@ -42,15 +48,15 @@
 
     <div class="img-container">
       <div class="subcontainer">
-        <img class="image" src="../assets/img/products/bondi_img.jpg" alt="bondi menu">
+        <img class="image" src="../../assets/img/products/bondi_img.jpg" alt="bondi menu">
       </div>
 
       <div class="subcontainer">
-        <img class="image" src="../assets/img/products/bondi_2.jpg" alt="bondi location">
+        <img class="image" src="../../assets/img/products/bondi_2.jpg" alt="bondi location">
       </div>
 
       <div class="subcontainer">
-        <img class="image" src="../assets/img/products/bondi_3.jpg" alt="bondi menu">
+        <img class="image" src="../../assets/img/products/bondi_3.jpg" alt="bondi menu">
       </div>
     </div>
 
@@ -94,99 +100,21 @@
       </div>
     </div>
 
-    <h2 id="title-review"> | Comments & Reviews</h2>
-
-    <section class="testimonies">
-      <div class="testimonies_header">
+    <div class="general-intro">
+      <div class="sub-intro">
+        <h2 id="title-review"> | Comments & Reviews</h2>
       </div>
-      <div class="testimonies_container">
-        <!--Review 1 -->
-        <div class="testimonies_box">
-          <div class="box_top">
-            <div class="profile">
-              <div class="username">
-                <strong>Cecilia Rodriguez</strong>
-                <strong>7/10/2021</strong>
-              </div>
-            </div>
-            <div class="reviews">
-              <p class="subclasificacion star">★</p>
-              <p class="subclasificacion star">★</p>
-              <p class="subclasificacion star">★</p>
-              <p class="subclasificacion star">★</p>
-              <p class="subclasificacion" >★</p>
-            </div>
-          </div>
-          <div class="clients_comments">
-            <p class="comment">A very charming place, nice music, nice people, but maybe you should improve the treatment with the clients. Above all, we enjoy a lovely night!</p>
-          </div>
-        </div>
-        <!--Review 2 -->
-        <div class="testimonies_box">
-          <div class="box_top">
-            <div class="profile">
-              <div class="username">
-                <strong>Cecilia Rodriguez</strong>
-                <strong>7/10/2021</strong>
-              </div>
-            </div>
-            <div class="reviews">
-              <p class="subclasificacion star">★</p>
-              <p class="subclasificacion star">★</p>
-              <p class="subclasificacion star">★</p>
-              <p class="subclasificacion star">★</p>
-              <p class="subclasificacion" >★</p>
-            </div>
-          </div>
-          <div class="clients_comments">
-            <p class="comment">A very charming place, nice music, nice people, but maybe you should improve the treatment with the clients. Above all, we enjoy a lovely night!</p>
-          </div>
-        </div>
-        <!--Review 3 -->
-        <div class="testimonies_box">
-          <div class="box_top">
-            <div class="profile">
-              <div class="username">
-                <strong>Cecilia Rodriguez</strong>
-                <strong>7/10/2021</strong>
-              </div>
-            </div>
-            <div class="reviews">
-              <p class="subclasificacion star">★</p>
-              <p class="subclasificacion star">★</p>
-              <p class="subclasificacion star">★</p>
-              <p class="subclasificacion star">★</p>
-              <p class="subclasificacion" >★</p>
-            </div>
-          </div>
-          <div class="clients_comments">
-            <p class="comment">A very charming place, nice music, nice people, but maybe you should improve the treatment with the clients. Above all, we enjoy a lovely night!</p>
-          </div>
-        </div>
-        <!--Review 4 -->
-        <div class="testimonies_box">
-          <div class="box_top">
-            <div class="profile">
-              <div class="username">
-                <strong>Cecilia Rodriguez</strong>
-                <strong>7/10/2021</strong>
-              </div>
-            </div>
-            <div class="reviews">
-              <p class="subclasificacion star">★</p>
-              <p class="subclasificacion star">★</p>
-              <p class="subclasificacion star">★</p>
-              <p class="subclasificacion star">★</p>
-              <p class="subclasificacion" >★</p>
-            </div>
-          </div>
-          <div class="clients_comments">
-            <p class="comment">A very charming place, nice music, nice people, but maybe you should improve the treatment with the clients. Above all, we enjoy a lovely night!</p>
-          </div>
+      <div class="sub-intro">
+        <div v-if="!user">
+          <router-link :to="{name: 'Signup'}" @click.native="scrollToTop"><button class="review-button">{{ button2 }}</button></router-link>
         </div>
 
+        <div v-if="user">
+          <a class="cta" href="" @click.prevent="review()"><button class="review-button">{{ button2 }}</button></a>
+        </div>
       </div>
-    </section>
+    </div>
+
 
 
     <Footer/>
@@ -195,14 +123,15 @@
 </template>
 
 <script>
-import Header from "./Header";
-import Footer from "./Footer";
+import Header from "../Header";
+import Footer from "../Footer";
 
 export default {
   name: "BondiBar",
   components: {Footer, Header},
   data () {
     return {
+      user: "",
       category: "AMERICAN • FOR FRIENDS",
       title: "Bondi Stop Bar",
       location: "Niceto Vega 5976, C1414 Buenos Aires",
@@ -211,7 +140,25 @@ export default {
       price: "ARS 600 - ARS 1500",
       cuisine: "Grill, Steakhouse, Bacon Burger, Barbecue",
       special: "Vegetarian options",
+      button2: "Review",
     }
+  },
+  mounted() {
+    if(sessionStorage.activeUser) {
+      let activeUser = sessionStorage.activeUser;
+      this.user = JSON.parse(activeUser);
+    }
+  },
+  methods: {
+    review() {
+      this.$router.push('/reviewform')
+    },
+    reserve() {
+      this.$router.push('/reserveform')
+    },
+    scrollToTop() {
+      window.scrollTo(0,0);
+    },
   }
 }
 </script>
@@ -311,7 +258,7 @@ a {
   color: #E12424;
 }
 
-#reserve-button {
+.reserve-button {
   background-color: #E12424;
   border-radius: 10px;
   border: transparent;
@@ -320,6 +267,22 @@ a {
   font-size: 40px;
   text-transform: uppercase;
   width: 400px;
+}
+
+.review-button {
+  background-color: #8FC460;
+  border-radius: 10px;
+  border: transparent;
+  cursor: pointer;
+  font-size: 40px;
+  text-transform: uppercase;
+  width: 400px;
+}
+
+.image {
+  height: 300px;
+  width: 400px;
+  position: relative;
 }
 
 .img-container {
@@ -335,10 +298,6 @@ a {
   flex-direction: column;
 }
 
-.image {
-  height: 300px;
-  width: 400px;
-}
 
 .details-container {
   margin-bottom: 100px;
@@ -387,80 +346,5 @@ h4 {
   color: #8FC460;
 }
 
-.testimonies{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: 100%;
-  margin-bottom: 100px;
-}
-.testimonies_header {
-  margin: 50px 0;
-  padding: 10px 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
 
-.testimonies_header span{
-  font-size:2.2rem;
-  color:#252525;
-  margin-bottom: 25px;
-}
-
-.testimonies_container{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  width: 100%;
-}
-.testimonies_box{
-  width: 500px;
-  box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.1);
-  background-color: white;
-  padding: 20px;
-  margin: 15px;
-}
-
-.profile{
-  display: flex;
-  align-items: center;
-}
-.username{
-  display: flex;
-  flex-direction: column;
-}
-
-.username strong {
-  color: #3d3d3d;
-  font-size: 1.3rem;
-}
-.date strong{
-  color: #3d3d3d;
-  font-size: 1.3rem;
-}
-.username span{
-  color: #979797;
-  font-size: 1.1rem;
-  margin: 1px;
-}
-.reviews{
-  color: #f9d71c;
-}
-.box_top{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-}
-.clients_comments{
-  color: #4b4b4b;
-}
-
-.comment {
-  color: #0F0D0D;
-}
 </style>

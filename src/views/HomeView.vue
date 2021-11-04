@@ -17,14 +17,14 @@
 </template>
 
 <script>
-import Header from "./Header";
-import Home from "./Home";
-import Footer from "./Footer";
-import Restaurants from "./Restaurants";
-import Events from "./Events";
+import Header from "../components/Header";
+import Home from "../components/Home";
+import Footer from "../components/Footer";
+import Restaurants from "../components/Restaurants";
+import Events from "../components/Events";
 
 export default {
-  name: "HomePage",
+  name: "HomeView",
   components: {
     Events,
     Restaurants,

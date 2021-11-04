@@ -79,7 +79,7 @@ export default {
       window.location.reload();
     },
     alert() {
-      alert("Se ha cerrado sesión correctamente!");
+      alert("You have successfully logged out of your account!");
     }
   },
 };
