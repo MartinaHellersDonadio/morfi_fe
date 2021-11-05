@@ -15,6 +15,10 @@ import Faqs from "./components/Faqs";
 import SuscribeSuccess from "./components/SuscribeSuccess";
 import BondiBar from "./components/Restaurants/BondiBar";
 import ElChavo from "./components/Restaurants/ElChavo";
+import ItalianBar from "./components/Restaurants/ItalianBar";
+import NaturalezaSabia from "./components/Restaurants/NaturalezaSabia";
+import PuntoSushi from "./components/Restaurants/PuntoSushi";
+import BocaToro from "./components/Restaurants/BocaToro";
 import ReviewForm from "./components/ReviewForm";
 import ReserveForm from "./components/ReserveForm";
 import Reviews from "./components/Reviews";
@@ -32,6 +36,10 @@ const routes = [
   { path: '/suscribesuccess', name: "SuscribeSuccess", component: SuscribeSuccess},
   { path: '/bondibar', name: "BondiBar", component: BondiBar},
   { path: '/elchavo', name: "ElChavo", component: ElChavo},
+  { path: '/italianbar', name: "ItalianBar", component: ItalianBar},
+  { path: '/naturalezasabia', name: "NaturalezaSabia", component: NaturalezaSabia},
+  { path: '/puntosushi', name: "PuntoSushi", component: PuntoSushi},
+  { path: '/bocatoro', name: "BocaToro", component: BocaToro},
   { path: '/reviewform', name: "ReviewForm", component: ReviewForm},
   { path: '/reserve', name: "ReserveForm", component: ReserveForm},
   { path: '/reviews', name: "Reviews", component: Reviews},

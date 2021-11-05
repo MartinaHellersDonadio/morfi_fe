@@ -61,9 +61,10 @@ const restaurantProducts = [
         name: "Naturaleza Sabia",
         image: "naturaleza_sabia.jpg",
         location:  "Balcarce 958, C1064 AAT, Buenos Aires",
-        price: "",
-        cuisine: "",
-        special:"",
+        price: "ARS 300 - ARS 1000",
+        cuisine: "Vegetarian and Vegan options",
+        time: "Open from Wednesday to Monday From 9:00 to 19:00 ",
+        transport: "Bus lines 130, 152, 64",
 
     },
     {
@@ -83,9 +84,11 @@ const restaurantProducts = [
         name: 'D´oro Italian Bar',
         image: "italian_bar.jpg",
         location:  "Perú 159, C1067AAC CABA",
-        price: "",
-        cuisine: "",
-        special:"",
+        price: "ARS 1000 - ARS 2000",
+        cuisine: "Italian, Bar, Mediterrean",
+        special:"Vegetarian options",
+        time: "Open from Monday to Sunday From 9:00 to 23:45 ",
+        transport: "Bus lines 68",
 
     },
     {
@@ -93,9 +96,11 @@ const restaurantProducts = [
         name: "Punto Sushi",
         image: "punto_sushi.jpg",
         location:  "Alsina 875, San Isidro, Provincia de Buenos Aires",
-        price: "",
-        cuisine: "",
-        special:"",
+        price: "ARS 1000 - 1500",
+        cuisine: "Salmon, Mexican & Philadelphia Sushi, Prawns",
+        special: "Exclusive Shashimis and Niguiris",
+        time: "Open from Tuesday to Sunday From 8:00 to 00:000",
+        transport: "Bus lines 68, 152",
 
     },
     {
@@ -103,9 +108,11 @@ const restaurantProducts = [
         name: "Boca de Toro",
         image: "boca_toro.jpg",
         location:  "Paraguay 685 C1057AAG, C1057 CABA",
-        price: "",
-        cuisine: "",
-        special:"",
+        price: "ARS 600 - ARS 1500",
+        cuisine: "Grill, Steakhouse, Rice exquisites, Pasta, Seafood",
+        special: "Vegetarian options",
+        time: "Open from Tuesday to Saturday From 18:00 to 00:000",
+        transport: "Bus lines 132",
 
     },
 

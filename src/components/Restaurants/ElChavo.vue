@@ -7,14 +7,15 @@
       <div class="sub-intro">
 
         <div class="intro-container">
-          <p id="category">{{ bondirestaurant["category"] }}</p>
-          <h1 id="title">{{ bondirestaurant["name"] }}</h1>
+
+          <p id="category-resto">{{ bondirestaurant["category"] }}</p>
+          <h1 id="title-resto">{{ bondirestaurant["name"] }}</h1>
           <div class="location-container">
             <div class="location-subcontainer">
-              <p id="location">{{ bondirestaurant["location"] }}</p>
+              <p id="location-resto">{{ bondirestaurant["location"] }}</p>
 
               <div class="location-subcontainer">
-                <a href="https://goo.gl/maps/MueVMSKfBaQZSrmNA">
+                <a href="https://www.google.com/maps/place/Bondi+Stop+Bar/@-34.5839651,-58.4434392,17z/data=!3m1!4b1!4m5!3m4!1s0x95bcb5f87a385537:0xfd3132b1f2b7da37!8m2!3d-34.5839651!4d-58.4434392">
                   <p id="view-map">{{ mapa }}</p>
                 </a>
               </div>
@@ -48,32 +49,32 @@
 
     <div class="img-container">
       <div class="subcontainer">
-        <img class="image" src="../../assets/img/products/el_chavo.jpg" alt="bondi menu">
+        <img class="image-resto" src="../../assets/img/products/el_chavo.jpg" alt="bondi menu">
       </div>
 
       <div class="subcontainer">
-        <img class="image" src="../../assets/img/products/el_chavo2.jpg" alt="bondi location">
+        <img class="image-resto" src="../../assets/img/products/el_chavo2.jpg" alt="bondi location">
       </div>
 
       <div class="subcontainer">
-        <img class="image" src="../../assets/img/products/el_chavo3.jpg" alt="bondi menu">
+        <img class="image-resto" src="../../assets/img/products/el_chavo3.jpg" alt="bondi menu">
       </div>
     </div>
 
     <div class="details-container">
       <div class="details-subcontainer">
-        <h2>Details</h2>
-        <h4>Price range</h4>
+        <h2 class="details-title">Details</h2>
+        <h4 class="details-subtitle">Price range</h4>
         <p class="info">{{ bondirestaurant["price"] }} </p>
-        <h4>Cuisine</h4>
+        <h4 class="details-subtitle">Cuisine</h4>
         <p class="info">{{ bondirestaurant["cuisine"] }}</p>
-        <h4>Special Diets</h4>
+        <h4 class="details-subtitle">Special Diets</h4>
         <p class="info">{{ bondirestaurant["special"] }}</p>
       </div>
 
       <div class="details-subcontainer">
-        <h2>Ratings</h2>
-        <h4>Food</h4>
+        <h2 class="details-title">Ratings</h2>
+        <h4 class="details-subtitle">Food</h4>
         <div class="clasificacion">
           <p class="subclasificacion circle">●</p>
           <p class="subclasificacion circle">●</p>
@@ -81,7 +82,7 @@
           <p class="subclasificacion circle">●</p>
           <p class="subclasificacion" >●</p>
         </div>
-        <h4>Service</h4>
+        <h4 class="details-subtitle">Service</h4>
         <div class="clasificacion">
           <p class="subclasificacion circle">●</p>
           <p class="subclasificacion circle">●</p>
@@ -92,10 +93,10 @@
       </div>
 
       <div class="details-subcontainer">
-        <h2>Opening Times</h2>
+        <h2 class="details-title">Opening Times</h2>
         <p class="info">{{ bondirestaurant["time"] }}</p>
-        <h2>Public transport</h2>
-        <span>{{ bondirestaurant["transport"]}}</span>
+        <h2 class="details-title">Public transport</h2>
+        <p class="transport">{{ bondirestaurant["transport"]}}</p>
       </div>
     </div>
 
@@ -114,6 +115,8 @@
       </div>
     </div>
 
+
+
     <Footer/>
 
   </div>
@@ -125,9 +128,10 @@ import Footer from "../Footer";
 
 import products from '../../assets/js/products';
 
+
 export default {
   name: "ElChavo",
-  components: {Header, Footer},
+  components: {Footer, Header},
   data () {
     return {
       bondirestaurant: products.restaurantProducts[2],
@@ -158,185 +162,5 @@ export default {
 </script>
 
 <style scoped>
-span {
-  color: #24262b;
-  font-weight: bolder;
-  font-size: 20px;
-}
-
-.general-intro {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.sub-intro {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.intro-container{
-  text-align: left;
-  margin-top: 200px;
-  margin-bottom: 80px;
-}
-
-p{
-  font-weight: lighter;
-  padding: 0px;
-}
-
-#category {
-  font-size: 20px;
-  color: #E12424;
-  margin-bottom: 20px;
-}
-
-#title {
-  font-size: 60px;
-  color: #0F0D0D;
-  margin-bottom: 50px;
-}
-
-#location {
-  color: #0F0D0D;
-  font-size: 25px;
-}
-
-.location-container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin-bottom: 20px;
-}
-
-.location-subcontainer {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-}
-
-a {
-  text-decoration: none;
-  cursor: pointer;
-}
-
-#view-map {
-  text-transform: uppercase;
-  color: #E12424;
-  font-weight: bold;
-  font-size: 25px;
-
-}
-
-.clasificacion {
-  display: inline-block;
-  display: row;
-
-}
-
-.subclasificacion {
-  display: inline-block;
-  font-size: 60px;
-  color: #b1b1b1;
-}
-
-.star {
-  color: gold;
-}
-
-.circle {
-  color: #E12424;
-}
-
-.reserve-button {
-  background-color: #E12424;
-  border-radius: 10px;
-  border: transparent;
-  cursor: pointer;
-  margin-top: 80px;
-  font-size: 40px;
-  text-transform: uppercase;
-  width: 400px;
-}
-
-.review-button {
-  background-color: #8FC460;
-  border-radius: 10px;
-  border: transparent;
-  cursor: pointer;
-  font-size: 40px;
-  text-transform: uppercase;
-  width: 400px;
-}
-
-.image {
-  height: 300px;
-  width: 400px;
-  position: relative;
-}
-
-.img-container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin-top: 10px;
-  margin-bottom: 90px;
-}
-
-.subcontainer {
-  display: flex;
-  flex-direction: column;
-}
-
-
-.details-container {
-  margin-bottom: 100px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  margin-left: 100px;
-  margin-right: 100px;
-}
-
-.details-subcontainer {
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  width: 400px;
-}
-
-h2 {
-  font-size: 40px;
-  font-weight: bold;
-  text-transform: uppercase;
-  margin-bottom: 25px;
-  color: #E12424;
-  text-align: left;
-}
-
-h4 {
-  color: #24262b;
-  text-transform: uppercase;
-  margin-bottom: 5px;
-  font-size: 25px;
-  text-align: left;
-}
-
-.info {
-  color: grey;
-  margin-bottom: 15px;
-  font-size: 20px;
-  text-align: left;
-}
-
-#title-review {
-  font-size: 60px;
-  margin-left: 100px;
-  color: #8FC460;
-}
+@import "../../assets/css/Restaurants.css";
 </style>
