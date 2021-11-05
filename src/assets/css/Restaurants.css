@@ -14,6 +14,10 @@
     align-items: center;
 }
 
+.comments {
+    margin-bottom: 100px;
+}
+
 .intro-container{
     text-align: left;
     margin-top: 200px;
@@ -175,7 +179,7 @@ a {
 
 #title-review {
     font-size: 60px;
-    margin-left: 100px;
+    margin-left: 70px;
     color: #8FC460;
 }
 

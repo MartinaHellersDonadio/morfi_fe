@@ -6,7 +6,7 @@
       <div class="subcontainer">
         <div class="section-resto">
           <div class="image-wrapper">
-            <router-link to="/bondibar"><img class="image" src="../assets/img/products/bondi_img.jpg" alt="bondi menu"></router-link>
+            <router-link to="/bondibar" @click.native="scrollToTop"><img class="image" src="../assets/img/products/bondi_img.jpg" alt="bondi menu"></router-link>
             <div class="text-image">Look into it!</div>
           </div>
           <h1 class="name">Bondi Stop Bar</h1>
@@ -19,7 +19,7 @@
 
       <div class="subcontainer">
         <div class="image-wrapper">
-          <router-link to="/elchavo"><img class="image" src="../assets/img/products/el_chavo.jpg" alt="bondi location"></router-link>
+          <router-link to="/elchavo" @click.native="scrollToTop"><img class="image" src="../assets/img/products/el_chavo.jpg" alt="bondi location"></router-link>
           <div class="text-image">Look into it!</div>
         </div>
         <h1 class="name">Parilla El Chavo</h1>
@@ -28,7 +28,7 @@
 
       <div class="subcontainer">
         <div class="image-wrapper">
-          <router-link to="/italianbar"><img class="image" src="../assets/img/products/italian_bar.jpg" alt="bondi menu"></router-link>
+          <router-link to="/italianbar" @click.native="scrollToTop"><img class="image" src="../assets/img/products/italian_bar.jpg" alt="bondi menu"></router-link>
           <div class="text-image">Look into it!</div>
         </div>
         <h1 class="name">D´oro Italian Bar</h1>
@@ -42,7 +42,7 @@
     <div class="resto-container">
       <div class="subcontainer">
         <div class="image-wrapper">
-          <router-link to="/naturalezasabia"><img class="image" src="../assets/img/products/naturaleza_sabia.jpg" alt="bondi menu"></router-link>
+          <router-link to="/naturalezasabia" @click.native="scrollToTop"><img class="image" src="../assets/img/products/naturaleza_sabia.jpg" alt="bondi menu"></router-link>
           <div class="text-image">Look into it!</div>
         </div>
         <h1 class="name">Naturaleza Sabia</h1>
@@ -51,7 +51,7 @@
 
       <div class="subcontainer">
         <div class="image-wrapper">
-          <router-link to="/puntosushi"><img class="image" src="../assets/img/products/punto_sushi.jpg" alt="bondi location"></router-link>
+          <router-link to="/puntosushi" @click.native="scrollToTop"><img class="image" src="../assets/img/products/punto_sushi.jpg" alt="bondi location"></router-link>
           <div class="text-image">Look into it!</div>
         </div>
         <h1 class="name">Punto Sushi</h1>
@@ -63,7 +63,7 @@
 
       <div class="subcontainer">
         <div class="image-wrapper">
-          <router-link to="/bocatoro"><img class="image" src="../assets/img/products/boca_toro.jpg" alt="bondi menu"></router-link>
+          <router-link to="/bocatoro" @click.native="scrollToTop"><img class="image" src="../assets/img/products/boca_toro.jpg" alt="bondi menu"></router-link>
           <div class="text-image">Look into it!</div>
         </div>
         <h1 class="name">Boca de Toro</h1>
@@ -78,8 +78,11 @@
 
 export default {
   name: "Restaurants",
-  components: {
-  },
+  methods: {
+    scrollToTop() {
+      window.scrollTo(0,0);
+    },
+  }
 }
 </script>
 

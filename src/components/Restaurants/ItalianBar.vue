@@ -70,6 +70,7 @@
         <p class="info">{{ bondirestaurant["cuisine"] }}</p>
         <h4 class="details-subtitle">Special Diets</h4>
         <p class="info">{{ bondirestaurant["special"] }}</p>
+        <img class="qr-image" src="../../assets/img/products/qr_italian.png" alt="menu qr italian">
       </div>
 
       <div class="details-subcontainer">
@@ -100,7 +101,7 @@
       </div>
     </div>
 
-    <div class="general-intro">
+    <div class="general-intro comments">
       <div class="sub-intro">
         <h2 id="title-review"> | Comments & Reviews</h2>
       </div>
@@ -150,7 +151,7 @@ export default {
       this.$router.push('/reviewform')
     },
     reserve() {
-      this.$router.push('/reserveform')
+      this.$router.push('/reserve')
     },
     scrollToTop() {
       window.scrollTo(0,0);

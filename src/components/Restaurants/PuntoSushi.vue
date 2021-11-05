@@ -101,7 +101,7 @@
       </div>
     </div>
 
-    <div class="general-intro">
+    <div class="general-intro comments">
       <div class="sub-intro">
         <h2 id="title-review"> | Comments & Reviews</h2>
       </div>
@@ -152,7 +152,7 @@ export default {
       this.$router.push('/reviewform')
     },
     reserve() {
-      this.$router.push('/reserveform')
+      this.$router.push('/reserve')
     },
     scrollToTop() {
       window.scrollTo(0,0);
