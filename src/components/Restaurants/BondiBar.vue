@@ -7,6 +7,7 @@
       <div class="sub-intro">
 
         <div class="intro-container">
+          
           <p id="category">{{ bondirestaurant["category"] }}</p>
           <h1 id="title">{{ bondirestaurant["name"] }}</h1>
           <div class="location-container">
