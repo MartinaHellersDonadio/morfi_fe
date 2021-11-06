@@ -158,6 +158,11 @@ li, p, button {
     color: #E12424;
 }
 
+.logout-subsection {
+    width: 120px;
+    padding: 0px;
+}
+
 .logout {
     display: flex;
     flex-wrap: wrap;

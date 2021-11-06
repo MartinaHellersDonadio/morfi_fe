@@ -12,7 +12,7 @@
         <p class="description-form">{{ descriptionform }}</p>
         <hr>
 
-        <form class="input-form" method="post" @submit="join()">
+        <form class="input-form" method="post" @submit="join()" @click.native="scrollToTop">
 
           <label><b>Owners Name</b></label>
           <input type="text"  placeholder="Enter your name" v-model="ownerName" id="ownersName" tabindex="1" required>
@@ -54,7 +54,7 @@
       </div>
 
       <div>
-        <router-link :to="{name: 'HomePage'}"><button id="button-back">Go back</button></router-link>
+        <router-link :to="{name: 'HomeView'}"><button id="button-back">Go back</button></router-link>
       </div>
     </div>
 
@@ -85,7 +85,10 @@ export default {
   methods: {
     join() {
       this.$router.push({name: "JoinSuccess", params: {clientName: this.ownerName}})
-    }
+    },
+    scrollToTop() {
+      window.scrollTo(0,0);
+    },
   },
 }
 </script>
