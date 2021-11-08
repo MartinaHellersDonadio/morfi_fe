@@ -23,8 +23,8 @@
           <div class="footer-col">
             <h3> {{ title3 }}</h3>
             <h4> {{ description3 }}</h4>
-            <form method="post" @submit="suscribe()">
-              <input type="email"  v-model="footerEmail" id="footer-email" placeholder="Enter Your Email Address" required>
+            <form method="post" @submit.prevent="subscribe()">
+              <input type="email"  v-model="subscribeEmail" id="footer-email" placeholder="Enter Your Email Address" required>
               <button type="submit" class="footer-email-btn">Suscribe</button>
             </form>
           </div>
@@ -38,11 +38,13 @@
 </template>
 
 <script>
+import axios from "axios";
+
 export default {
   name: "Footer",
   data () {
     return {
-      footerEmail: "",
+      subscribeEmail: "",
       title1: "Contact",
       description1: "We care to know what you think about the experience in Morfi to adjust what does not go so well",
       link1: "morfi@info.com.ar",
@@ -54,9 +56,19 @@ export default {
     }
   },
   methods: {
-    suscribe() {
+    subscribe() {
+      axios.post("http://localhost:5000/api/v1/subscriberequest",{
+        subscribe_email: this.subscribeEmail,
+      })
+      .then(response => {
+      console.log(response)
       this.$router.push({name: "SuscribeSuccess"})
-    }
+      })
+      .catch(error => {
+       console.log(error);
+        this.$router.push({name: "ServerError"})
+      });
+    },
   },
 }
 </script>

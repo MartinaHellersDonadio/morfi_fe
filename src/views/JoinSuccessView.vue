@@ -12,6 +12,7 @@
       <div class="success-container">
         <h1 class="success-text">Thank you <span id="title-join-success">{{ this.$route.params["clientName"]}}</span>!</h1>
         <h2 class="success-text">We received your information correctly and we will be contacting you via email in the next few hours</h2>
+        <p></p>
       </div>
 
     </div>
@@ -23,12 +24,11 @@
 
 <script>
 
-
-import Header from "./Header";
-import Footer from "./Footer";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 export default {
-  name: "JoinSuccess",
+  name: "JoinSuccessView",
   components: {Footer, Header}
 }
 

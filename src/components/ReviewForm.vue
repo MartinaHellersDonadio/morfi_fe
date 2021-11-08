@@ -1,47 +1,34 @@
 <template>
   <body>
   <div style="display: flex; flex-direction: column; margin-left: 30px;">
-    <form action="/tu-php.php">
+
+    <form @submit.prevent="review()">
       <div>
-        <h1>Nombre de resto</h1>
+        <h1>Bondi Stop Bar</h1>
         <h2>
           Your overall rating of this restaurant
         </h2>
         <p class="stars-row">
-          <input type="radio" id="1star" name="stars" value="5" />
+          <input type="radio" id="1star" name="stars" value="5" v-model="star1"/>
           <label class="star-label" for="1star"></label>
-          <input type="radio" id="2star" name="stars" value="4" />
+          <input type="radio" id="2star" name="stars" value="4" v-model="star2"/>
           <label class="star-label" for="2star"></label>
-          <input type="radio" id="3star" name="stars" value="3" />
+          <input type="radio" id="3star" name="stars" value="3" v-model="star3"/>
           <label class="star-label" for="3star"></label>
-          <input type="radio" id="4star" name="stars" value="2" />
+          <input type="radio" id="4star" name="stars" value="2" v-model="star4"/>
           <label class="star-label" for="4star"></label>
-          <input type="radio" id="5star" name="stars" value="1" />
+          <input type="radio" id="5star" name="stars" value="1" v-model="star5"/>
           <label class="star-label" for="5star"></label>
         </p>
       </div>
       <h2>Your review</h2>
-      <textarea class="textarea" type="text" cols="40" rows="6" placeholder="Tell people about your experience: your meal, atmosphere, service?"></textarea>
-      <h2 style="margin-top: 40px;">Date of visit</h2>
-      <input style="width: 160px" type="date" id="date" name="review-date" />
-      <h2 style="margin-top: 40px;">How expensive is this restaurant?</h2>
-      <div style="display: flex; flex-direction: row;">
-        <input type="radio" id="cheap" name="price-range" value="1" />
-        <label class="price-label" for="cheap">
-          <div>CHEAP EATS</div>
-          <div>quick serve or self-service</div>
-        </label>
-        <input type="radio" id="mid-range" name="price-range" value="2" />
-        <label class="price-label" for="mid-range">
-          <div>MID RANGE</div>
-          <div>casual, table service</div>
-        </label>
-        <input type="radio" id="fine" name="price-range" value="3" />
-        <label class="price-label" for="fine">
-          <div>FINE DINING</div>
-          <div>more formal or dressy</div>
-        </label>
-      </div>
+
+      <textarea class="textarea" type="text" cols="40" rows="6" placeholder="Tell people about your experience: your meal, atmosphere, service?" v-model="comments"></textarea>
+
+      <h2>Date of visit</h2>
+
+      <input type="date" id="date" name="review-date" v-model="date"/>
+
       <input type="submit" value="Submit my review" class="button" />
     </form>
   </div>
@@ -50,7 +37,23 @@
 
 <script>
 export default {
-  name: "ReviewForm"
+  name: "ReviewForm",
+  data () {
+    return {
+      star1: "",
+      star2: "",
+      star3: "",
+      star4: "",
+      star5: "",
+      comments: "",
+      date: "",
+    }
+  },
+  methods: {
+    review() {
+
+    }
+  }
 }
 </script>
 
@@ -68,6 +71,8 @@ h1 {
 h2 {
   font-weight: 500;
   font-size: 16px;
+  margin-top: 40px;
+
 }
 
 
@@ -101,6 +106,11 @@ input[type="radio"]:checked ~ .star-label {
 
 input[type="radio"] {
   display: none;
+}
+
+input[type="date"] {
+  width: 160px;
+
 }
 
 .textarea {

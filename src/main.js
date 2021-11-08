@@ -10,7 +10,7 @@ import Login from "./components/Login";
 import Signup from "./components/Signup";
 import NotFound from "./components/NotFound";
 import JoinUs from "./components/JoinUs";
-import JoinSuccess from "./components/JoinSuccess";
+import JoinSuccessView from "./views/JoinSuccessView";
 import Faqs from "./components/Faqs";
 import SuscribeSuccess from "./components/SuscribeSuccess";
 import BondiBar from "./components/Restaurants/BondiBar";
@@ -30,7 +30,7 @@ const routes = [
   { path: '/joinus', name: "Joinus", component: JoinUs},
   { path: '/login', name: "Login", component: Login},
   { path: '/signup', name: "Signup", component: Signup},
-  { path: '/joinus/joinsuccess', name: "JoinSuccess", component: JoinSuccess},
+  { path: '/joinus/joinsuccess', name: "JoinSuccess", component: JoinSuccessView},
   { path: '*', component: NotFound },
   { path:  '/faqs', name: "Faqs", component: Faqs},
   { path: '/suscribesuccess', name: "SuscribeSuccess", component: SuscribeSuccess},

@@ -112,6 +112,7 @@ a {
     font-size: 40px;
     text-transform: uppercase;
     width: 400px;
+    cursor: pointer;
 }
 
 .image-resto {
