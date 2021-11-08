@@ -3,10 +3,10 @@
     <section>
       <div class="container">
         <h3>Reservation</h3>
-        <form>
+        <form method="post" @submit.prevent="reserve()">
           <div class = "form-row">
-            <select name = "days">
-              <option value="day-select">Select Day</option>
+            <select name = "days" v-model="day">
+              <option value="">Select a Day</option>
               <option value="sunday">Sunday</option>
               <option value="monday">Monday</option>
               <option value="tuesday">Tuesday</option>
@@ -16,36 +16,36 @@
               <option value="saturday">Saturday</option>
             </select>
 
-            <select name="hours">
-              <option value="hour-select">Select Hour</option>
-              <option value="10">12: 00</option>
-              <option value="10">13: 00</option>
-              <option value="10">14: 00</option>
-              <option value="10">18: 00</option>
-              <option value="10">20: 00</option>
-              <option value="10">19: 00</option>
-              <option value="10">21: 00</option>
-              <option value="10">22: 00</option>
+            <select name="hours" v-model="time">
+              <option value="">Select Hour</option>
+              <option value="12:00">12: 00</option>
+              <option value="13:00">13: 00</option>
+              <option value="14:00">14: 00</option>
+              <option value="18:00">18: 00</option>
+              <option value="20:00">20: 00</option>
+              <option value="19:00">19: 00</option>
+              <option value="21:00">21: 00</option>
+              <option value="22:00">22: 00</option>
             </select>
 
-            <select name="restaurant">
-              <option value="restaurant-select">Select a Restaurant</option>
-              <option value="bondi">Bondi Stop Bar</option>
-              <option value="sabia">Naturaleza Sabia</option>
-              <option value="elchavo">Parrila El Chavo</option>
-              <option value="d'oro">D'Oro Italian Bar</option>
-              <option value="sushi">Punto Sushi</option>
-              <option value="bocatoro">Boca de Toro</option>
+            <select name="restaurant" v-model="restaurant">
+              <option value="">Select a Restaurant</option>
+              <option value="Bondi Stop Bar">Bondi Stop Bar</option>
+              <option value="Naturaleza Sabia">Naturaleza Sabia</option>
+              <option value="El Chavo">Parrila El Chavo</option>
+              <option value="D'Oro Italian Bar">D'Oro Italian Bar</option>
+              <option value="Punto Sushi">Punto Sushi</option>
+              <option value="Boca Toro">Boca de Toro</option>
             </select>
           </div>
 
           <div class="form-row">
-            <input type="text" placeholder="Full Name">
-            <input type="text" placeholder="Phone Number">
+            <input type="text" placeholder="Full Name" v-model="fullName">
+            <input type="text" placeholder="Phone Number" v-model="phoneNumber">
           </div>
 
           <div class="form-row">
-            <input type="number" placeholder="How Many Persons?" min = "1" max="16">
+            <input type="number" placeholder="How Many Persons?" min = "1" max="16" v-model="quantity">
             <input type="submit" value = "BOOK TABLE">
           </div>
         </form>
@@ -60,9 +60,41 @@
 
 <script>
 import Footer from "./Footer";
+import axios from "axios";
 export default {
   name: "ReserveForm",
-  components: {Footer}
+  components: {Footer},
+  data () {
+    return {
+      day: '',
+      time: '',
+      restaurant: '',
+      fullName: '',
+      phoneNumber: '',
+      quantity: '',
+    }
+  },
+  methods: {
+    reserve() {
+      axios.post("http://localhost:5000/api/v1/reservations",{
+        day: this.day,
+        time: this.time,
+        restaurant: this.restaurant,
+        full_name: this.fullName,
+        phone_number: this.phoneNumber,
+        quantity: this.quantity,
+
+      })
+          .then(response => {
+            console.log(response)
+            this.$router.push({name: "JoinSuccess"})
+          })
+          .catch(error => {
+            console.log(error);
+            this.$router.push({name: "ServerError"})
+          });
+    },
+  },
 }
 </script>
 

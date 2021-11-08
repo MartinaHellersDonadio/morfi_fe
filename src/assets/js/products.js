@@ -52,7 +52,7 @@ const restaurantProducts = [
         price: "ARS 600 - ARS 1500",
         cuisine: "Grill, Steakhouse, Bacon Burger, Barbecue",
         special:"Vegetarian options",
-        time: "Open from Wednesday to Monday From 17:00 to 00:00 ",
+        time: "Open from Monday to Sunday From 12:00 to 22:00 ",
         transport: "Bus lines 140, 108, 151, 168, 39",
 
     },
@@ -63,7 +63,7 @@ const restaurantProducts = [
         location:  "Balcarce 958, C1064 AAT, Buenos Aires",
         price: "ARS 300 - ARS 1000",
         cuisine: "Vegetarian and Vegan options",
-        time: "Open from Wednesday to Monday From 9:00 to 19:00 ",
+        time: "Open from Monday to Sunday From 12:00 to 22:00 ",
         transport: "Bus lines 130, 152, 64",
 
     },
@@ -75,7 +75,7 @@ const restaurantProducts = [
         price: "ARS 500 - ARS 900",
         cuisine: "Grill, Steakhouse, Bacon Burger, Barbecue",
         special:"Vegetarian options",
-        time: "Open from Monday to Sunday From 11:00 to 00:00 ",
+        time: "Open from Monday to Sunday From 12:00 to 22:00 ",
         transport: "Bus lines 33, 37",
 
     },
@@ -87,7 +87,7 @@ const restaurantProducts = [
         price: "ARS 1000 - ARS 2000",
         cuisine: "Italian, Bar, Mediterrean",
         special:"Vegetarian options",
-        time: "Open from Monday to Sunday From 9:00 to 23:45 ",
+        time: "Open from Monday to Sunday From 12:00 to 22:00 ",
         transport: "Bus lines 68",
 
     },
@@ -99,7 +99,7 @@ const restaurantProducts = [
         price: "ARS 1000 - 1500",
         cuisine: "Salmon, Mexican & Philadelphia Sushi, Prawns",
         special: "Exclusive Shashimis and Niguiris",
-        time: "Open from Tuesday to Sunday From 8:00 to 00:000",
+        time: "Open from Monday to Sunday From 12:00 to 22:00 ",
         transport: "Bus lines 68, 152",
 
     },
@@ -111,7 +111,7 @@ const restaurantProducts = [
         price: "ARS 600 - ARS 1500",
         cuisine: "Grill, Steakhouse, Rice exquisites, Pasta, Seafood",
         special: "Vegetarian options",
-        time: "Open from Tuesday to Saturday From 18:00 to 00:000",
+        time: "Open from Monday to Sunday From 12:00 to 22:00 ",
         transport: "Bus lines 132",
 
     },
