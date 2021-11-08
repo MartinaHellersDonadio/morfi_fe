@@ -12,7 +12,7 @@ import NotFound from "./components/NotFound";
 import JoinUs from "./components/JoinUs";
 import JoinSuccessView from "./views/JoinSuccessView";
 import Faqs from "./components/Faqs";
-import SuscribeSuccess from "./components/SuscribeSuccess";
+import SubscribeSuccessView from "./views/SubscribeSuccessView";
 import BondiBar from "./components/Restaurants/BondiBar";
 import ElChavo from "./components/Restaurants/ElChavo";
 import ItalianBar from "./components/Restaurants/ItalianBar";
@@ -21,8 +21,10 @@ import PuntoSushi from "./components/Restaurants/PuntoSushi";
 import BocaToro from "./components/Restaurants/BocaToro";
 import ReviewForm from "./components/ReviewForm";
 import ReserveForm from "./components/ReserveForm";
+import ReservationSuccessView from "./views/ReservationSuccessView";
 import Reviews from "./components/Reviews";
 import ServerErrorView from "./views/ServerErrorView";
+import CheckoutErrView from "./views/CheckoutErrView";
 
 
 const routes = [
@@ -33,7 +35,7 @@ const routes = [
   { path: '/joinus/joinsuccess', name: "JoinSuccess", component: JoinSuccessView},
   { path: '*', component: NotFound },
   { path:  '/faqs', name: "Faqs", component: Faqs},
-  { path: '/suscribesuccess', name: "SuscribeSuccess", component: SuscribeSuccess},
+  { path: '/subscribesuccess', name: "SubscribeSuccessView", component: SubscribeSuccessView},
   { path: '/bondibar', name: "BondiBar", component: BondiBar},
   { path: '/elchavo', name: "ElChavo", component: ElChavo},
   { path: '/italianbar', name: "ItalianBar", component: ItalianBar},
@@ -42,8 +44,10 @@ const routes = [
   { path: '/bocatoro', name: "BocaToro", component: BocaToro},
   { path: '/reviewform', name: "ReviewForm", component: ReviewForm},
   { path: '/reserve', name: "ReserveForm", component: ReserveForm},
+  { path: '/reserve/reservesuccess', name: "ReserveSuccess", component: ReservationSuccessView},
+  { path: '/reserve/checkouterr', name: "CheckoutErr", component: CheckoutErrView},
   { path: '/reviews', name: "Reviews", component: Reviews},
-  { path: '/reserve/checkout/err', name: "ServerError", component: ServerErrorView},
+  { path: '/err', name: "ServerError", component: ServerErrorView},
 
 ]
 

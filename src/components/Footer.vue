@@ -62,7 +62,7 @@ export default {
       })
       .then(response => {
       console.log(response)
-      this.$router.push({name: "SuscribeSuccess"})
+      this.$router.push({name: "SubscribeSuccessView"})
       })
       .catch(error => {
        console.log(error);

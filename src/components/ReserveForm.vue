@@ -1,5 +1,8 @@
 <template>
   <div>
+
+    <Header/>
+
     <section>
       <div class="container">
         <h3>Reservation</h3>
@@ -7,13 +10,13 @@
           <div class = "form-row">
             <select name = "days" v-model="day">
               <option value="">Select a Day</option>
-              <option value="sunday">Sunday</option>
-              <option value="monday">Monday</option>
-              <option value="tuesday">Tuesday</option>
-              <option value="wednesday">Wednesday</option>
-              <option value="thursday">Thursday</option>
-              <option value="friday">Friday</option>
-              <option value="saturday">Saturday</option>
+              <option value="Sunday">Sunday</option>
+              <option value="Monday">Monday</option>
+              <option value="Tuesday">Tuesday</option>
+              <option value="Wednesday">Wednesday</option>
+              <option value="Thursday">Thursday</option>
+              <option value="Friday">Friday</option>
+              <option value="Saturday">Saturday</option>
             </select>
 
             <select name="hours" v-model="time">
@@ -60,10 +63,12 @@
 
 <script>
 import Footer from "./Footer";
+import Header from "./Header";
+
 import axios from "axios";
 export default {
   name: "ReserveForm",
-  components: {Footer},
+  components: {Footer, Header},
   data () {
     return {
       day: '',
@@ -87,11 +92,11 @@ export default {
       })
           .then(response => {
             console.log(response)
-            this.$router.push({name: "JoinSuccess"})
+            this.$router.push({name: "ReserveSuccess"})
           })
           .catch(error => {
             console.log(error);
-            this.$router.push({name: "ServerError"})
+            this.$router.push({name: "CheckoutErr"})
           });
     },
   },

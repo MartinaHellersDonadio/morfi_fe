@@ -44,10 +44,6 @@
 export default {
   name: "Header",
   props: {
-    showButton: {
-      type: Boolean,
-      default: true
-    },
     showButton1: {
       type: Boolean,
       default: true

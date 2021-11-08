@@ -15,7 +15,7 @@
 
 <script>
 export default {
-  name: "SuscribeSuccess",
+  name: "SubscribeSuccessView",
   data () {
     return {
       titlesubscribe: "Thank you for joining our newsletter",
