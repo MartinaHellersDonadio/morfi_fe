@@ -54,7 +54,7 @@ const restaurantProducts = [
         special:"Vegetarian options",
         time: "Open from Monday to Sunday From 12:00 to 22:00 ",
         transport: "Bus lines 140, 108, 151, 168, 39",
-
+        shop_id: "0001",
     },
     {
         category: "VEGETARIAN • FOR BIRTHDAYS",
@@ -65,6 +65,7 @@ const restaurantProducts = [
         cuisine: "Vegetarian and Vegan options",
         time: "Open from Monday to Sunday From 12:00 to 22:00 ",
         transport: "Bus lines 130, 152, 64",
+        shop_id: "0002",
 
     },
     {
@@ -77,7 +78,7 @@ const restaurantProducts = [
         special:"Vegetarian options",
         time: "Open from Monday to Sunday From 12:00 to 22:00 ",
         transport: "Bus lines 33, 37",
-
+        shop_id: "0003",
     },
     {
         category: "ITALIAN • BUSINESS",
@@ -89,6 +90,7 @@ const restaurantProducts = [
         special:"Vegetarian options",
         time: "Open from Monday to Sunday From 12:00 to 22:00 ",
         transport: "Bus lines 68",
+        shop_id: "0004",
 
     },
     {
@@ -101,6 +103,7 @@ const restaurantProducts = [
         special: "Exclusive Shashimis and Niguiris",
         time: "Open from Monday to Sunday From 12:00 to 22:00 ",
         transport: "Bus lines 68, 152",
+        shop_id: "0005",
 
     },
     {
@@ -113,6 +116,7 @@ const restaurantProducts = [
         special: "Vegetarian options",
         time: "Open from Monday to Sunday From 12:00 to 22:00 ",
         transport: "Bus lines 132",
+        shop_id: "0006",
 
     },
 

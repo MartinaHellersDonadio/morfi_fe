@@ -127,7 +127,7 @@
 import Header from "../Header";
 import Footer from "../Footer";
 
-import products from '../../assets/js/products';
+import products from '../../assets/js/shops';
 
 export default {
   name: "BocaToro",

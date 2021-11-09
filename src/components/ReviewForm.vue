@@ -1,10 +1,9 @@
 <template>
   <body>
-  <div style="display: flex; flex-direction: column; margin-left: 30px;">
+  <div class="review-container">
 
-    <form @submit.prevent="review()">
+    <form method="post" @submit.prevent="review()">
       <div>
-        <h1>Bondi Stop Bar</h1>
         <h2>
           Your overall rating of this restaurant
         </h2>
@@ -23,13 +22,16 @@
       </div>
       <h2>Your review</h2>
 
-      <textarea class="textarea" type="text" cols="40" rows="6" v-model="comment" placeholder="Tell people about your experience: your meal, atmosphere, service?"></textarea>
+      <textarea class="textarea" type="text" cols="20" rows="4" v-model="comment" placeholder="Tell people about your experience: your meal, atmosphere, service?"></textarea>
 
       <h2>Date of visit</h2>
 
-      <input type="date" id="date" name="review-date" v-model="date"/>
+      <div class="section-bottom">
+        <input type="date" id="date" name="review-date" v-model="date"/>
 
-      <input type="submit" value="Submit my review" class="button" />
+        <input type="submit" value="Submit my review" class="button" />
+      </div>
+
     </form>
   </div>
   </body>
@@ -37,8 +39,10 @@
 
 <script>
 import axios from "axios";
+
 export default {
   name: "ReviewForm",
+  props: ["shop_id"],
   data () {
     return {
       picked: '',
@@ -48,18 +52,20 @@ export default {
   },
   methods: {
     review() {
+      
       axios.post( "http://localhost:5000/api/v1/reviews", {
         stars: this.picked,
         comment: this.comment,
         date: this.date,
+        shop_id: this.shop_id,
       })
           .then(response => {
             console.log(response)
-            this.$router.push()
+            this.$router.push({name: "JoinSuccess"})
           })
           .catch(error => {
             console.log(error);
-            this.$router.push()
+            this.$router.push({name: "ServerError"})
           });
     }
   }
@@ -72,16 +78,24 @@ export default {
   box-sizing: content-box;
 }
 
+.review-container {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  align-items: center;
+}
+
 h1 {
   font-weight: bold;
   font-size: 32px;
+  text-align: center;
 }
 
 h2 {
   font-weight: 500;
   font-size: 16px;
   margin-top: 40px;
-
+  text-align: center;
 }
 
 
@@ -91,6 +105,7 @@ h2 {
   flex-direction: row;
   direction: rtl;
   unicode-bidi: bidi-override;
+  margin: auto;
 }
 
 .star-label:hover {
@@ -119,60 +134,31 @@ input[type="radio"] {
 
 input[type="date"] {
   width: 160px;
+  margin-top: 20px;
+  margin: auto;
+  margin-bottom: 80px;
 
 }
 
 .textarea {
-  width: 600px;
-  height: 250px;
+  width: 300px;
+  height: 200px;
+  margin: auto;
 }
 
 .button {
   width: 150px;
   height: 30px;
-  margin-top: 60px;
   background-color: #252422;
   border-radius: 4px;
   color: white;
   font-weight: bold;
+  margin: auto;
 }
 
-.price-label {
-  width: 280px;
-  height: 125px;
-  background: #FFFFFF;
-  border: 1px solid #C4C4C4;
-  box-sizing: border-box;
-  box-shadow: 4px 7px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 4px;
+.section-bottom {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  user-select: none;
 }
 
-.price-label:hover {
-  transform: scale(1.02);
-}
-
-.price-label:active {
-  transform: scale(.98);
-}
-
-.price-label ~ .price-label {
-  margin-left: 25px;
-}
-
-.price-label > div {
-  font-style: normal;
-  font-weight: 600;
-  font-size: 24px;
-}
-
-.price-label > div ~ div {
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 22px;
-}
 </style>

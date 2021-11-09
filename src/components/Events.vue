@@ -30,7 +30,7 @@
 
 
 import RestaurantProduct from "./RestaurantProduct";
-import products from "../assets/js/products";
+import products from "../assets/js/shops";
 
 
 export default {
