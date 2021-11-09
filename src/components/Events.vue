@@ -5,7 +5,7 @@
     </div>
     <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1siY21nn9fB8T2CBk_xLZbc6jgzpV7ITz"></iframe>
     <div>
-      <MenuProduct v-for="(product, index) in products" v-bind:key="index"
+      <RestaurantProduct v-for="(product, index) in products" v-bind:key="index"
                     v-bind:name="product.name"
                     v-bind:image="product.image"
                     v-bind:description="product.description"
@@ -29,13 +29,13 @@
 <script>
 
 
-import MenuProduct from "./MenuProduct";
+import RestaurantProduct from "./RestaurantProduct";
 import products from "../assets/js/products";
 
 
 export default {
   name: "Events",
-  components: {MenuProduct},
+  components: {RestaurantProduct},
   data () {
     return {
       title: "Get to know the most important Gastronomic Events in Buenos Aires!",

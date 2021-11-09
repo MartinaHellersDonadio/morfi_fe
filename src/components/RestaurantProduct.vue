@@ -1,22 +1,22 @@
 <template>
-  <div id="restaurants-container">
+  <div id="main">
 
-    <div class="restaurant">
-      <div class="image-wrap">
-        <img class="image" v-bind:src="require('../assets/img/products/' + image)" v-bind:alt="productAlt">
-        <a class="cta" href=""><div class="text-image">Look into it!</div></a>
+    <h2 class="product-title">{{ name }}</h2>
+
+    <div class="main-subcontainer">
+
+      <div class="section">
+        <a href="https://www.google.com/maps/d/u/0/embed?mid=1siY21nn9fB8T2CBk_xLZbc6jgzpV7ITz"><img class="product-img" v-bind:src="require('../assets/img/products/' + image)" v-bind:alt="productAlt"></a>
+      </div>
+
+      <div class="section text">
+        <p class="text-container">{{ description }}</p>
+        <p class="text-time">{{ time }}</p>
+        <a href="https://www.google.com/maps/d/u/0/embed?mid=1siY21nn9fB8T2CBk_xLZbc6jgzpV7ITz"><p class="text-location">{{ location }}</p></a>
+        <p class="text-price">{{ price }}</p>
       </div>
 
     </div>
-
-    <div class="restaurant text">
-        <p class="category">{{ category }}</p>
-        <h1>{{ name }}</h1>
-        <p>{{ location }}</p>
-        <p>{{ price }}</p>
-        <p class="discount">{{ discount }}</p>
-    </div>
-
   </div>
 </template>
 
@@ -24,112 +24,90 @@
 export default {
   name: "RestaurantProduct",
   props: [
-    "category",
     "name",
     "image",
+    "description",
+    "time",
     "location",
     "price",
-    "discount",
   ],
   data () {
     return {
-      productAlt: "Restaurant Photo",
+      productAlt: "Foto Evento"
     }
   },
 }
 </script>
 
 <style scoped>
-* {
-  font-family: 'Montserrat', sans-serif;
+#main {
+  font-family: Montserrat;
+
 }
 
-#restaurants-container {
+.product-title {
+  margin-top: 60px;
+  background-color: lightskyblue;
+  width: 500px;
+  font-size: 40px;
+}
+
+.main-subcontainer {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
   margin-top: 30px;
-  margin-right: 200px;
-  margin-left: 200px;
 }
-
-.restaurant {
+.section {
+  display: flex;
   flex-direction: column;
   align-items: center;
   margin: auto;
-  margin-top: 30px;
-  display: table-cell;
-  vertical-align: middle;
-}
-
-h1 {
-  margin-bottom: 20px;
-}
-
-.category {
-  font-size: 20px;
-  color: #E12424;
-  font-weight: lighter;
-
 }
 
 .text {
-  margin-top: ;
-  max-width: 500px;
+  width: 700px;
+  height: 360px;
 }
 
-image {
-  height: 100px;
-  width: 100px;
-  margin: auto;
+.text:hover {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
-.image {
-  border-radius: 6px;
-  height: 100%;
-  width: 100%;
-  vertical-align: center;
+.text-container {
+  color: #E12424;
+  font-weight: 25px;
 }
 
-.image-wrap {
-  height: 300px;
-  width: 500px;
-  position: relative;
-}
-p {
-  color: #24262b;
-}
-
-.text-image {
-  position: absolute;
-  visibility: hidden;
-  opacity: 0;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  font-weight: bold;
+.text-time {
+  font-weight: bolder;
   font-size: 30px;
+  text-transform: uppercase;
 }
 
-.image-wrap:hover .text-image {
-  visibility: visible;
-  opacity: 1;
+.text-location {
+  color:darkcyan;
+  font-weight: bolder;
 }
 
-.image:hover {
-  filter: blur(5px);
-  filter: brightness(0.5);
-  cursor: pointer;
+.text-price {
+  background-color: greenyellow;
+  border-radius: 30px;
 }
 
-.discount {
-  font-size: 40px;
-  color: green;
+.product-img {
+  height: 400px;
+  width: 550px;
   margin: auto;
-  margin-top: 10px;
+}
+
+p {
+  color: #0F0D0D;
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 20px;
 }
 
 </style>

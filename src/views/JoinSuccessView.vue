@@ -10,8 +10,8 @@
       </div>
 
       <div class="success-container">
-        <h1 class="success-text">Thank you <span id="title-join-success">{{ this.$route.params["clientName"]}}</span>!</h1>
-        <h2 class="success-text">We received your information correctly and we will be contacting you via email in the next few hours</h2>
+        <h1 class="success-text">{{ greeting }} <span id="title-join-success">{{ this.$route.params["clientName"]}}</span>!</h1>
+        <h2 class="success-text">{{ confirmation }}</h2>
         <p></p>
       </div>
 
@@ -29,7 +29,13 @@ import Footer from "../components/Footer";
 
 export default {
   name: "JoinSuccessView",
-  components: {Footer, Header}
+  components: {Footer, Header},
+  data () {
+    return {
+      greeting: "Thank you",
+      confirmation: "We received your information correctly and we will be contacting you via email in the next few hours",
+    }
+  }
 }
 
 </script>

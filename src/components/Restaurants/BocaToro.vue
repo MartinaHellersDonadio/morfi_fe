@@ -15,7 +15,7 @@
               <p id="location-resto">{{ bondirestaurant["location"] }}</p>
 
               <div class="location-subcontainer">
-                <a href="https://www.google.com/maps/place/Bondi+Stop+Bar/@-34.5839651,-58.4434392,17z/data=!3m1!4b1!4m5!3m4!1s0x95bcb5f87a385537:0xfd3132b1f2b7da37!8m2!3d-34.5839651!4d-58.4434392">
+                <a href="https://g.page/bocadetorobsas?share">
                   <p id="view-map">{{ mapa }}</p>
                 </a>
               </div>

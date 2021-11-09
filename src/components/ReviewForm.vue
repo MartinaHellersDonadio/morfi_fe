@@ -23,7 +23,7 @@
       </div>
       <h2>Your review</h2>
 
-      <textarea class="textarea" type="text" cols="40" rows="6" placeholder="Tell people about your experience: your meal, atmosphere, service?" v-model="comments"></textarea>
+      <textarea class="textarea" type="text" cols="40" rows="6" v-model="comment" placeholder="Tell people about your experience: your meal, atmosphere, service?"></textarea>
 
       <h2>Date of visit</h2>
 
@@ -36,18 +36,31 @@
 </template>
 
 <script>
+import axios from "axios";
 export default {
   name: "ReviewForm",
   data () {
     return {
       picked: '',
-      comments: "",
+      comment: "",
       date: "",
     }
   },
   methods: {
     review() {
-
+      axios.post( "http://localhost:5000/api/v1/reviews", {
+        stars: this.picked,
+        comment: this.comment,
+        date: this.date,
+      })
+          .then(response => {
+            console.log(response)
+            this.$router.push()
+          })
+          .catch(error => {
+            console.log(error);
+            this.$router.push()
+          });
     }
   }
 }
