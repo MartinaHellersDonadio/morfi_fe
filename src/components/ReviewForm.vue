@@ -9,15 +9,15 @@
           Your overall rating of this restaurant
         </h2>
         <p class="stars-row">
-          <input type="radio" id="1star" name="stars" value="5" v-model="star1"/>
+          <input type="radio" id="1star" name="stars" value="5stars" v-model="picked"/>
           <label class="star-label" for="1star"></label>
-          <input type="radio" id="2star" name="stars" value="4" v-model="star2"/>
+          <input type="radio" id="2star" name="stars" value="4stars" v-model="picked"/>
           <label class="star-label" for="2star"></label>
-          <input type="radio" id="3star" name="stars" value="3" v-model="star3"/>
+          <input type="radio" id="3star" name="stars" value="3stars" v-model="picked"/>
           <label class="star-label" for="3star"></label>
-          <input type="radio" id="4star" name="stars" value="2" v-model="star4"/>
+          <input type="radio" id="4star" name="stars" value="2stars" v-model="picked"/>
           <label class="star-label" for="4star"></label>
-          <input type="radio" id="5star" name="stars" value="1" v-model="star5"/>
+          <input type="radio" id="5star" name="stars" value="1stars" v-model="picked"/>
           <label class="star-label" for="5star"></label>
         </p>
       </div>
@@ -40,11 +40,7 @@ export default {
   name: "ReviewForm",
   data () {
     return {
-      star1: "",
-      star2: "",
-      star3: "",
-      star4: "",
-      star5: "",
+      picked: '',
       comments: "",
       date: "",
     }

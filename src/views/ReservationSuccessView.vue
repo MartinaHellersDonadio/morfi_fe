@@ -12,7 +12,7 @@
 
         <div class="text">
           <p class="reserve-paragraph"> {{ subtitle }}</p>
-          <p class="reserve-paragraph"> Reservation id: </p>
+          <p class="reserve-paragraph"> Reservation id: <span class="id">{{ this.$route.params["reservation_id"]}}</span></p>
         </div>
       </div>
 
@@ -84,7 +84,6 @@ export default {
 
 .reserve-paragraph{
   font-size: 30px;
-  font-style: italic;
   color: #24262b;
 }
 
@@ -106,5 +105,9 @@ export default {
 
 .button-title {
   color: whitesmoke;
+}
+
+.id {
+  color: #E12424;
 }
 </style>

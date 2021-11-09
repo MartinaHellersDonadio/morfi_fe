@@ -92,7 +92,7 @@ export default {
       })
           .then(response => {
             console.log(response)
-            this.$router.push({name: "ReserveSuccess"})
+            this.$router.push({name: "ReserveSuccess", params: {reservation_id: response.data["reservation_id"]}})
           })
           .catch(error => {
             console.log(error);
