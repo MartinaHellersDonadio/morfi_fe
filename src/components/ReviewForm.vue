@@ -47,7 +47,7 @@ export default {
   name: "ReviewForm",
   data () {
     return {
-      picked: '',
+      picked: "",
       comment: "",
       date: "",
       shop_id: shops.restaurantProducts["shop_id"],
