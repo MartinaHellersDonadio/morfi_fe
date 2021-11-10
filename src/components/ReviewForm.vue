@@ -52,8 +52,9 @@ export default {
   },
   methods: {
     review() {
-      
+      const active_user = JSON.parse(sessionStorage.getItem('active_user'))
       axios.post( "http://localhost:5000/api/v1/reviews", {
+        user_name: active_user,
         stars: this.picked,
         comment: this.comment,
         date: this.date,
