@@ -29,7 +29,8 @@
       <div class="section-bottom">
         <input type="date" id="date" name="review-date" v-model="date"/>
 
-        <input type="submit" value="Submit my review" class="button" />
+        <button type="submit" class="button">Submit my review</button>
+
       </div>
 
     </form>
@@ -40,24 +41,27 @@
 <script>
 import axios from "axios";
 
+import shops from "../assets/js/shops";
+
 export default {
   name: "ReviewForm",
-  props: ["shop_id"],
   data () {
     return {
       picked: '',
       comment: "",
       date: "",
+      shop_id: shops.restaurantProducts["shop_id"],
     }
   },
   methods: {
     review() {
-      
+      const active_user = JSON.parse(sessionStorage.getItem('activeUser'))
       axios.post( "http://localhost:5000/api/v1/reviews", {
+        user_name: active_user.username,
         stars: this.picked,
         comment: this.comment,
         date: this.date,
-        shop_id: this.shop_id,
+        shop_id: shops.restaurantProducts["shop_id"]
       })
           .then(response => {
             console.log(response)

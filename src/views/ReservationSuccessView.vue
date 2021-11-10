@@ -12,7 +12,7 @@
 
         <div class="text">
           <p class="reserve-paragraph"> {{ subtitle }}</p>
-          <p class="reserve-paragraph"> Reservation id: <span class="id">{{ this.$route.params["reservation_id"]}}</span></p>
+          <p class="reserve-paragraph"> Reservation id: <span class="id">#{{ this.$route.params["reservation_id"]}}</span></p>
         </div>
       </div>
 
