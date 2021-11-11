@@ -8,16 +8,8 @@
         <h3>Reservation</h3>
         <form method="post" @submit.prevent="reserve()">
           <div class = "form-row">
-            <select name = "days" v-model="day">
-              <option value="">Select a Day</option>
-              <option value="Sunday">Sunday</option>
-              <option value="Monday">Monday</option>
-              <option value="Tuesday">Tuesday</option>
-              <option value="Wednesday">Wednesday</option>
-              <option value="Thursday">Thursday</option>
-              <option value="Friday">Friday</option>
-              <option value="Saturday">Saturday</option>
-            </select>
+
+            <input type="date" id="start" v-model="day" name="trip-start" value="2018-07-22" min="2021-11-17" max="2023-12-31">
 
             <select name="hours" v-model="time">
               <option value="">Select Hour</option>
@@ -81,7 +73,9 @@ export default {
   },
   methods: {
     reserve() {
+      const active_user = JSON.parse(sessionStorage.getItem('activeUser'))
       axios.post("http://localhost:5000/api/v1/reservations",{
+        user_name: active_user.username,
         day: this.day,
         time: this.time,
         restaurant: this.restaurant,

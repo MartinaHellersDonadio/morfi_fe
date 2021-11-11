@@ -1,0 +1,25 @@
+.profile-container {
+    margin-top: 200px;
+    margin-bottom: 300px;
+}
+
+.title-profile {
+    margin: auto;
+    text-align: center;
+    color: #E12424;
+    font-family: Montserrat;
+    font-size: 60px;
+}
+
+table, th, td {
+    border: 1px solid white;
+    border-collapse: collapse;
+    padding: 5px;
+    margin: auto;
+    margin-top: 60px;
+}
+th, td {
+    background-color: #b1b1b1;
+    white-space:pre;
+    width: 200px;
+}

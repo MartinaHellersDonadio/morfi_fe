@@ -8,11 +8,11 @@
 
         <div class="intro-container">
 
-          <p id="category-resto">{{ bondirestaurant["category"] }}</p>
-          <h1 id="title-resto">{{ bondirestaurant["name"] }}</h1>
+          <p id="category-resto">{{ sushirestaurant["category"] }}</p>
+          <h1 id="title-resto">{{ sushirestaurant["name"] }}</h1>
           <div class="location-container">
             <div class="location-subcontainer">
-              <p id="location-resto">{{ bondirestaurant["location"] }}</p>
+              <p id="location-resto">{{ sushirestaurant["location"] }}</p>
 
               <div class="location-subcontainer">
                 <a href="https://goo.gl/maps/7PhbN8ApNPRmfeDF9">
@@ -65,11 +65,11 @@
       <div class="details-subcontainer">
         <h2 class="details-title">Details</h2>
         <h4 class="details-subtitle">Price range</h4>
-        <p class="info">{{ bondirestaurant["price"] }} </p>
+        <p class="info">{{ sushirestaurant["price"] }} </p>
         <h4 class="details-subtitle">Cuisine</h4>
-        <p class="info">{{ bondirestaurant["cuisine"] }}</p>
+        <p class="info">{{ sushirestaurant["cuisine"] }}</p>
         <h4 class="details-subtitle">Special Diets</h4>
-        <p class="info">{{ bondirestaurant["special"] }}</p>
+        <p class="info">{{ sushirestaurant["special"] }}</p>
         <img class="qr-image" src="../../assets/img/products/qr_sushi.png" alt="menu qr suhi point">
       </div>
 
@@ -95,15 +95,18 @@
 
       <div class="details-subcontainer">
         <h2 class="details-title">Opening Times</h2>
-        <p class="info">{{ bondirestaurant["time"] }}</p>
+        <p class="info">{{ sushirestaurant["time"] }}</p>
         <h2 class="details-title">Public transport</h2>
-        <p class="transport">{{ bondirestaurant["transport"]}}</p>
+        <p class="transport">{{ sushirestaurant["transport"]}}</p>
       </div>
     </div>
 
     <div class="general-intro comments">
       <div class="sub-intro">
         <h2 id="title-review"> | Comments & Reviews</h2>
+      </div>
+      <div>
+
       </div>
       <div class="sub-intro">
         <div v-if="!user">
@@ -127,29 +130,44 @@
 import Header from "../Header";
 import Footer from "../Footer";
 
-import products from '../../assets/js/shops';
+import shops from '../../assets/js/shops';
+
+import axios from "axios";
 
 export default {
   name: "PuntoSushi",
   components: {Footer, Header},
   data () {
     return {
-      bondirestaurant: products.restaurantProducts[4],
+      sushirestaurant: shops.restaurantProducts[4],
       user: "",
       mapa: "see map",
       button1: "Reserve your table",
       button2: "Review",
+      reviews: []
     }
   },
+  beforeMount() {
+
+  }
   mounted() {
     if(sessionStorage.activeUser) {
       let activeUser = sessionStorage.activeUser;
       this.user = JSON.parse(activeUser);
     }
+    axios.get('http://localhost:5000/api/v1/reviews/' + this.sushirestaurant["shop_id"])
+        .then(response => {
+          console.log(response.data)
+        })
+        .catch(error => {
+          console.log(error);
+          this.$router.push({name: "ServerError"})
+        });
+
   },
   methods: {
     review() {
-      this.$router.push('/reviewform')
+      this.$router.push({name: "ReviewForm", params: {shop_id: this.sushirestaurant["shop_id"]}})
     },
     reserve() {
       this.$router.push('/reserve')

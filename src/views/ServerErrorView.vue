@@ -2,7 +2,7 @@
   <div class="error-container">
     <h1 class="title-error">Oops! There has been an error! It's not your fault!</h1>
     <div>
-      <router-link :to="{name: 'HomeView'}"><button id="button-back">Go back</button></router-link>
+      <router-link :to="{name: 'Home'}"><button id="button-back">Go back</button></router-link>
     </div>
   </div>
 </template>

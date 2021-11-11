@@ -8,11 +8,11 @@
 
         <div class="intro-container">
 
-          <p id="category-resto">{{ bondirestaurant["category"] }}</p>
-          <h1 id="title-resto">{{ bondirestaurant["name"] }}</h1>
+          <p id="category-resto">{{ bocatororestaurant["category"] }}</p>
+          <h1 id="title-resto">{{ bocatororestaurant["name"] }}</h1>
           <div class="location-container">
             <div class="location-subcontainer">
-              <p id="location-resto">{{ bondirestaurant["location"] }}</p>
+              <p id="location-resto">{{ bocatororestaurant["location"] }}</p>
 
               <div class="location-subcontainer">
                 <a href="https://g.page/bocadetorobsas?share">
@@ -65,11 +65,11 @@
       <div class="details-subcontainer">
         <h2 class="details-title">Details</h2>
         <h4 class="details-subtitle">Price range</h4>
-        <p class="info">{{ bondirestaurant["price"] }} </p>
+        <p class="info">{{ bocatororestaurant["price"] }} </p>
         <h4 class="details-subtitle">Cuisine</h4>
-        <p class="info">{{ bondirestaurant["cuisine"] }}</p>
+        <p class="info">{{ bocatororestaurant["cuisine"] }}</p>
         <h4 class="details-subtitle">Special Diets</h4>
-        <p class="info">{{ bondirestaurant["special"] }}</p>
+        <p class="info">{{ bocatororestaurant["special"] }}</p>
         <img class="qr-image" src="../../assets/img/products/qr_bocatoro.png" alt="menu qr boca toro">
       </div>
 
@@ -95,9 +95,9 @@
 
       <div class="details-subcontainer">
         <h2 class="details-title">Opening Times</h2>
-        <p class="info">{{ bondirestaurant["time"] }}</p>
+        <p class="info">{{ bocatororestaurant["time"] }}</p>
         <h2 class="details-title">Public transport</h2>
-        <p class="transport">{{ bondirestaurant["transport"]}}</p>
+        <p class="transport">{{ bocatororestaurant["transport"]}}</p>
       </div>
     </div>
 
@@ -127,14 +127,14 @@
 import Header from "../Header";
 import Footer from "../Footer";
 
-import products from '../../assets/js/shops';
+import shops from '../../assets/js/shops';
 
 export default {
   name: "BocaToro",
   components: {Footer, Header},
   data () {
     return {
-      bondirestaurant: products.restaurantProducts[5],
+      bocatororestaurant: shops.restaurantProducts[5],
       user: "",
       mapa: "see map",
       button1: "Reserve your table",
@@ -149,7 +149,7 @@ export default {
   },
   methods: {
     review() {
-      this.$router.push('/reviewform')
+      this.$router.push({name: "ReviewForm", params: {shop_id: this.bocatororestaurant["shop_id"]}})
     },
     reserve() {
       this.$router.push('/reserve')

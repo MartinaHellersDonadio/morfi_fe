@@ -8,11 +8,11 @@
 
         <div class="intro-container">
 
-          <p id="category-resto">{{ bondirestaurant["category"] }}</p>
-          <h1 id="title-resto">{{ bondirestaurant["name"] }}</h1>
+          <p id="category-resto">{{ italianrestaurant["category"] }}</p>
+          <h1 id="title-resto">{{ italianrestaurant["name"] }}</h1>
           <div class="location-container">
             <div class="location-subcontainer">
-              <p id="location-resto">{{ bondirestaurant["location"] }}</p>
+              <p id="location-resto">{{ italianrestaurant["location"] }}</p>
 
               <div class="location-subcontainer">
                 <a href="https://g.page/doroitalianbar?share">
@@ -65,11 +65,11 @@
       <div class="details-subcontainer">
         <h2 class="details-title">Details</h2>
         <h4 class="details-subtitle">Price range</h4>
-        <p class="info">{{ bondirestaurant["price"] }} </p>
+        <p class="info">{{ italianrestaurant["price"] }} </p>
         <h4 class="details-subtitle">Cuisine</h4>
-        <p class="info">{{ bondirestaurant["cuisine"] }}</p>
+        <p class="info">{{ italianrestaurant["cuisine"] }}</p>
         <h4 class="details-subtitle">Special Diets</h4>
-        <p class="info">{{ bondirestaurant["special"] }}</p>
+        <p class="info">{{ italianrestaurant["special"] }}</p>
         <img class="qr-image" src="../../assets/img/products/qr_italian.png" alt="menu qr italian">
       </div>
 
@@ -95,9 +95,9 @@
 
       <div class="details-subcontainer">
         <h2 class="details-title">Opening Times</h2>
-        <p class="info">{{ bondirestaurant["time"] }}</p>
+        <p class="info">{{ italianrestaurant["time"] }}</p>
         <h2 class="details-title">Public transport</h2>
-        <p class="transport">{{ bondirestaurant["transport"]}}</p>
+        <p class="transport">{{ italianrestaurant["transport"]}}</p>
       </div>
     </div>
 
@@ -125,7 +125,7 @@
 import Header from "../Header";
 import Footer from "../Footer";
 
-import products from '../../assets/js/shops';
+import shops from '../../assets/js/shops';
 
 
 export default {
@@ -133,7 +133,7 @@ export default {
   components: {Footer, Header},
   data () {
     return {
-      bondirestaurant: products.restaurantProducts[3],
+      italianrestaurant: shops.restaurantProducts[3],
       user: "",
       mapa: "see map",
       button1: "Reserve your table",
@@ -148,7 +148,7 @@ export default {
   },
   methods: {
     review() {
-      this.$router.push('/reviewform')
+      this.$router.push({name: "ReviewForm", params: {shop_id: this.italianrestaurant["shop_id"]}})
     },
     reserve() {
       this.$router.push('/reserve')

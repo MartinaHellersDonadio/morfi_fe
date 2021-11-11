@@ -41,8 +41,6 @@
 <script>
 import axios from "axios";
 
-import shops from "../assets/js/shops";
-
 export default {
   name: "ReviewForm",
   data () {
@@ -50,19 +48,22 @@ export default {
       picked: "",
       comment: "",
       date: "",
-      shop_id: shops.restaurantProducts["shop_id"],
+      restaurant_id: this.$route.params["shop_id"],
     }
   },
   methods: {
     review() {
       const active_user = JSON.parse(sessionStorage.getItem('activeUser'))
-      axios.post( "http://localhost:5000/api/v1/reviews", {
+      const body = {
         user_name: active_user.username,
         stars: this.picked,
         comment: this.comment,
         date: this.date,
-        shop_id: shops.restaurantProducts["shop_id"]
-      })
+        shop_id: this.restaurant_id,
+      };
+      console.log(this.$route.params)
+      console.log(body)
+      axios.post("http://localhost:5000/api/v1/reviews", body)
           .then(response => {
             console.log(response)
             this.$router.push({name: "JoinSuccess"})

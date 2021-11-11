@@ -1,14 +1,14 @@
 <template>
   <header>
 
-    <router-link to="/"><img id="logo" src="../assets/img/morfi_logo.png" alt="Morfi Logo"></router-link>
+    <router-link to="/home"><img id="logo" src="../assets/img/morfi_logo.png" alt="Morfi Logo"></router-link>
     <h2 id="title">{{ title }}</h2>
 
     <nav>
       <ul class="nav-links">
-        <li><p class="links" @click="$emit('menuEvent', 'home')">{{ section1 }}</p></li>
-        <li><p class="links" @click="$emit('menuEvent', 'restaurants')">{{ section2 }}</p></li>
-        <li><p class="links" @click="$emit('menuEvent', 'events')">{{ section3 }}</p></li>
+        <router-link to="/"><li><p class="links">{{ section1 }}</p></li></router-link>
+        <router-link to="/restaurants"><li><p class="links">{{ section2 }}</p></li></router-link>
+        <router-link to="/events"><li><p class="links">{{ section3 }}</p></li></router-link>
       </ul>
     </nav>
 
@@ -26,7 +26,7 @@
 
     <div class="logout" v-if="user">
       <div class="logout-subsection">
-        <img id="logout-id" src="../assets/img/login_icon.png" alt="login icon">
+        <router-link to="/profile"><img id="logout-id" src="../assets/img/login_icon.png" alt="login icon"></router-link>
       </div>
 
       <div class="logout-subsection">
@@ -71,7 +71,7 @@ export default {
   methods: {
     logout(){
       sessionStorage.removeItem('activeUser');
-      this.$router.push('/');
+      this.$router.push('/home');
       window.location.reload();
     },
     alert() {

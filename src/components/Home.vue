@@ -1,67 +1,80 @@
 <template>
-  <div id="home">
 
-    <div class="first-container">
+  <div>
 
-      <div class="subcontainer">
-        <img id="img-home" src="../assets/img/img_home.png" alt="image brand">
+    <Header/>
+
+    <div id="home">
+
+      <div class="first-container">
+
+        <div class="subcontainer">
+          <img id="img-home" src="../assets/img/img_home.png" alt="image brand">
+        </div>
+
+        <div class="subcontainer">
+          <h1 id="slogan">{{ slogan1 }}<br> {{ slogan2 }} <span>{{ slogan3 }}</span></h1>
+          <img id="scroll-down" src="../assets/img/scroll_down.png" alt="scroll down icon">
+        </div>
+
       </div>
 
-      <div class="subcontainer">
-        <h1 id="slogan">{{ slogan1 }}<br> {{ slogan2 }} <span>{{ slogan3 }}</span></h1>
-        <img id="scroll-down" src="../assets/img/scroll_down.png" alt="scroll down icon">
+      <div class="second-container">
+
+        <div class="process">
+          <img class="icon" src="../assets/img/user_icon.png" alt="identity icon">
+          <p class="description-icon">{{ icon1 }}</p>
+        </div>
+
+        <div class="process">
+          <img class="icon" src="../assets/img/shop_icon.png" alt="shop icon">
+          <p class="description-icon">{{ icon2 }}</p>
+        </div>
+
+        <div class="process">
+          <img class="icon" src="../assets/img/star_icon.png" alt="star icon">
+          <p class="description-icon">{{ icon3 }}</p>
+        </div>
+
+      </div>
+
+      <div class="third-container">
+        <h1 id="us">{{ title2 }}</h1>
+      </div>
+
+      <div id="fourth-container">
+
+        <div class="about-us">
+          <p id="description-us">{{ description }}</p>
+        </div>
+
+        <div class="about-us">
+          <img id="img-about" src="../assets/img/compu.png" alt="img about us">
+        </div>
+
+      </div>
+
+      <div class="fifth-container">
+
+        <h2 id="ending-phrase"> {{ phrase }}</h2>
+        <img id="ending-home" src="../assets/img/gif_home.gif" alt="img bottom home">
+
       </div>
 
     </div>
 
-    <div class="second-container">
-
-      <div class="process">
-        <img class="icon" src="../assets/img/user_icon.png" alt="identity icon">
-        <p class="description-icon">{{ icon1 }}</p>
-      </div>
-
-      <div class="process">
-        <img class="icon" src="../assets/img/shop_icon.png" alt="shop icon">
-        <p class="description-icon">{{ icon2 }}</p>
-      </div>
-
-      <div class="process">
-        <img class="icon" src="../assets/img/star_icon.png" alt="star icon">
-        <p class="description-icon">{{ icon3 }}</p>
-      </div>
-
-    </div>
-
-    <div class="third-container">
-      <h1 id="us">{{ title2 }}</h1>
-    </div>
-
-    <div id="fourth-container">
-
-      <div class="about-us">
-        <p id="description-us">{{ description }}</p>
-      </div>
-
-      <div class="about-us">
-        <img id="img-about" src="../assets/img/compu.png" alt="img about us">
-      </div>
-
-    </div>
-
-    <div class="fifth-container">
-
-      <h2 id="ending-phrase"> {{ phrase }}</h2>
-      <img id="ending-home" src="../assets/img/gif_home.gif" alt="img bottom home">
-
-    </div>
+    <Footer/>
 
   </div>
+
 </template>
 
 <script>
+import Header from "./Header";
+import Footer from "./Footer";
 export default {
   name: "Home",
+  components: {Footer, Header},
   data () {
     return {
       slogan1: "It's not just food,",

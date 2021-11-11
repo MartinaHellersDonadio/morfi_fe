@@ -127,7 +127,8 @@
 import Header from "../Header";
 import Footer from "../Footer";
 
-import products from '../../assets/js/shops';
+import shops from '../../assets/js/shops';
+
 
 
 export default {
@@ -135,7 +136,7 @@ export default {
   components: {Footer, Header},
   data () {
     return {
-      bondirestaurant: products.restaurantProducts[0],
+      bondirestaurant: shops.restaurantProducts[0],
       user: "",
       mapa: "see map",
       button1: "Reserve your table",
@@ -150,7 +151,7 @@ export default {
   },
   methods: {
     review() {
-      this.$router.push('/reviewform')
+      this.$router.push({name: "ReviewForm", params: {shop_id: this.bondirestaurant["shop_id"]}})
     },
     reserve() {
       this.$router.push('/reserve')
@@ -158,6 +159,9 @@ export default {
     scrollToTop() {
       window.scrollTo(0,0);
     },
+  },
+  beforeMount() {
+    //axios.get("http://localhost:5000/api/v1/reviews/<restaurant-id>", )
   }
 }
 </script>

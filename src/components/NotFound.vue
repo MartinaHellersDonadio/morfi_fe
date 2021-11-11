@@ -5,7 +5,7 @@
 
       <h1 id="notfound">{{ phrase1 }}<br><span>{{ phrase2 }}</span> {{ phrase3 }}</h1>
 
-      <router-link :to="{name: 'HomePage'}"><img src="../assets/img/morfi_logo.png" alt="morfi logo"></router-link>
+      <router-link :to="{name: 'Home'}"><img src="../assets/img/morfi_logo.png" alt="morfi logo"></router-link>
 
     </div>
 

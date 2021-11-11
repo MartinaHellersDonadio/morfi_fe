@@ -5,7 +5,10 @@ Vue.config.productionTip = false
 
 Vue.use(VueRouter)
 import App from './App.vue'
-import HomeView from "./views/HomeView";
+import Home from "./components/Home";
+import Profile from "./components/Profile";
+import Restaurants from "./components/Restaurants";
+import Events from "./components/Events";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
 import NotFound from "./components/NotFound";
@@ -28,7 +31,10 @@ import CheckoutErrView from "./views/CheckoutErrView";
 
 
 const routes = [
-  { path: '/', name: "HomeView", component: HomeView},
+  { path: '/', name: "Home", component: Home},
+  { path: '/profile', name: "Profile", component: Profile},
+  { path: '/restaurants', name: "Restaurants", component: Restaurants},
+  { path: '/events', name: "Events", component: Events},
   { path: '/joinus', name: "Joinus", component: JoinUs},
   { path: '/login', name: "Login", component: Login},
   { path: '/signup', name: "Signup", component: Signup},
@@ -36,17 +42,17 @@ const routes = [
   { path: '*', component: NotFound },
   { path:  '/faqs', name: "Faqs", component: Faqs},
   { path: '/subscribesuccess', name: "SubscribeSuccessView", component: SubscribeSuccessView},
-  { path: '/bondibar', name: "BondiBar", component: BondiBar},
-  { path: '/elchavo', name: "ElChavo", component: ElChavo},
-  { path: '/italianbar', name: "ItalianBar", component: ItalianBar},
-  { path: '/naturalezasabia', name: "NaturalezaSabia", component: NaturalezaSabia},
-  { path: '/puntosushi', name: "PuntoSushi", component: PuntoSushi},
-  { path: '/bocatoro', name: "BocaToro", component: BocaToro},
+  { path: '/restaurants/bondibar', name: "BondiBar", component: BondiBar},
+  { path: '/restaurants/elchavo', name: "ElChavo", component: ElChavo},
+  { path: '/restaurants/italianbar', name: "ItalianBar", component: ItalianBar},
+  { path: '/restaurants/naturalezasabia', name: "NaturalezaSabia", component: NaturalezaSabia},
+  { path: '/restaurants/puntosushi', name: "PuntoSushi", component: PuntoSushi},
+  { path: '/restaurants/bocatoro', name: "BocaToro", component: BocaToro},
   { path: '/reviewform', name: "ReviewForm", component: ReviewForm},
   { path: '/reserve', name: "ReserveForm", component: ReserveForm},
   { path: '/reserve/reservesuccess', name: "ReserveSuccess", component: ReservationSuccessView},
   { path: '/reserve/checkouterr', name: "CheckoutErr", component: CheckoutErrView},
-  { path: '/reviews', name: "Reviews", component: Reviews},
+  { path: '/reviews/:shop_id?', name: "Reviews", component: Reviews},
   { path: '/err', name: "ServerError", component: ServerErrorView},
 
 ]

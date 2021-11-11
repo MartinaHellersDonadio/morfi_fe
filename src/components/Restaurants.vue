@@ -1,83 +1,95 @@
 <template>
-  <div class="main-container">
-    <h1>Choose your favorite place!</h1>
+  <div>
 
-    <div class="resto-container">
-      <div class="subcontainer">
-        <div class="section-resto">
+    <Header/>
+
+    <div class="main-container">
+      <h1>Choose your favorite place!</h1>
+
+      <div class="resto-container">
+        <div class="subcontainer">
+          <div class="section-resto">
+            <div class="image-wrapper">
+              <router-link to="/restaurants/bondibar" @click.native="scrollToTop"><img class="image" src="../assets/img/products/bondi_img.jpg" alt="bondi menu"></router-link>
+              <div class="text-image">Look into it!</div>
+            </div>
+            <h1 class="name">Bondi Stop Bar</h1>
+            <div class="row">
+              <p class="price">Price average: $1000</p>
+              <p class="discount">-20%</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="subcontainer">
           <div class="image-wrapper">
-            <router-link to="/bondibar" @click.native="scrollToTop"><img class="image" src="../assets/img/products/bondi_img.jpg" alt="bondi menu"></router-link>
+            <router-link to="/restaurants/elchavo" @click.native="scrollToTop"><img class="image" src="../assets/img/products/el_chavo.jpg" alt="bondi location"></router-link>
             <div class="text-image">Look into it!</div>
           </div>
-          <h1 class="name">Bondi Stop Bar</h1>
+          <h1 class="name">Parilla El Chavo</h1>
+          <p class="price">Price average: $500</p>
+        </div>
+
+        <div class="subcontainer">
+          <div class="image-wrapper">
+            <router-link to="/restaurants/italianbar" @click.native="scrollToTop"><img class="image" src="../assets/img/products/italian_bar.jpg" alt="bondi menu"></router-link>
+            <div class="text-image">Look into it!</div>
+          </div>
+          <h1 class="name">D´oro Italian Bar</h1>
           <div class="row">
-            <p class="price">Price average: $1000</p>
-            <p class="discount">-20%</p>
+            <p class="price">Price average: $2000</p>
+            <p class="discount">-30%</p>
           </div>
         </div>
       </div>
 
-      <div class="subcontainer">
-        <div class="image-wrapper">
-          <router-link to="/elchavo" @click.native="scrollToTop"><img class="image" src="../assets/img/products/el_chavo.jpg" alt="bondi location"></router-link>
-          <div class="text-image">Look into it!</div>
+      <div class="resto-container">
+        <div class="subcontainer">
+          <div class="image-wrapper">
+            <router-link to="/restaurants/naturalezasabia" @click.native="scrollToTop"><img class="image" src="../assets/img/products/naturaleza_sabia.jpg" alt="bondi menu"></router-link>
+            <div class="text-image">Look into it!</div>
+          </div>
+          <h1 class="name">Naturaleza Sabia</h1>
+          <p class="price">Price average: $500</p>
         </div>
-        <h1 class="name">Parilla El Chavo</h1>
-        <p class="price">Price average: $500</p>
-      </div>
 
-      <div class="subcontainer">
-        <div class="image-wrapper">
-          <router-link to="/italianbar" @click.native="scrollToTop"><img class="image" src="../assets/img/products/italian_bar.jpg" alt="bondi menu"></router-link>
-          <div class="text-image">Look into it!</div>
+        <div class="subcontainer">
+          <div class="image-wrapper">
+            <router-link to="/restaurants/puntosushi" @click.native="scrollToTop"><img class="image" src="../assets/img/products/punto_sushi.jpg" alt="bondi location"></router-link>
+            <div class="text-image">Look into it!</div>
+          </div>
+          <h1 class="name">Punto Sushi</h1>
+          <div class="row">
+            <p class="price">Price average: $750</p>
+            <p class="discount">-30%</p>
+          </div>
         </div>
-        <h1 class="name">D´oro Italian Bar</h1>
-        <div class="row">
+
+        <div class="subcontainer">
+          <div class="image-wrapper">
+            <router-link to="/restaurants/bocatoro" @click.native="scrollToTop"><img class="image" src="../assets/img/products/boca_toro.jpg" alt="bondi menu"></router-link>
+            <div class="text-image">Look into it!</div>
+          </div>
+          <h1 class="name">Boca de Toro</h1>
           <p class="price">Price average: $2000</p>
-          <p class="discount">-30%</p>
         </div>
       </div>
+
     </div>
 
-    <div class="resto-container">
-      <div class="subcontainer">
-        <div class="image-wrapper">
-          <router-link to="/naturalezasabia" @click.native="scrollToTop"><img class="image" src="../assets/img/products/naturaleza_sabia.jpg" alt="bondi menu"></router-link>
-          <div class="text-image">Look into it!</div>
-        </div>
-        <h1 class="name">Naturaleza Sabia</h1>
-        <p class="price">Price average: $500</p>
-      </div>
-
-      <div class="subcontainer">
-        <div class="image-wrapper">
-          <router-link to="/puntosushi" @click.native="scrollToTop"><img class="image" src="../assets/img/products/punto_sushi.jpg" alt="bondi location"></router-link>
-          <div class="text-image">Look into it!</div>
-        </div>
-        <h1 class="name">Punto Sushi</h1>
-        <div class="row">
-          <p class="price">Price average: $750</p>
-          <p class="discount">-30%</p>
-        </div>
-      </div>
-
-      <div class="subcontainer">
-        <div class="image-wrapper">
-          <router-link to="/bocatoro" @click.native="scrollToTop"><img class="image" src="../assets/img/products/boca_toro.jpg" alt="bondi menu"></router-link>
-          <div class="text-image">Look into it!</div>
-        </div>
-        <h1 class="name">Boca de Toro</h1>
-        <p class="price">Price average: $2000</p>
-      </div>
-    </div>
+    <Footer/>
 
   </div>
+
 </template>
 
 <script>
 
+import Header from "./Header";
+import Footer from "./Footer";
 export default {
   name: "Restaurants",
+  components: {Footer, Header},
   methods: {
     scrollToTop() {
       window.scrollTo(0,0);

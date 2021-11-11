@@ -1,29 +1,38 @@
 <template>
-  <div id="principal-container">
-    <div>
-      <h1 id="main-title">{{ title }}</h1>
-    </div>
-    <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1siY21nn9fB8T2CBk_xLZbc6jgzpV7ITz"></iframe>
-    <div>
-      <RestaurantProduct v-for="(product, index) in products" v-bind:key="index"
-                    v-bind:name="product.name"
-                    v-bind:image="product.image"
-                    v-bind:description="product.description"
-                    v-bind:time="product.time"
-                    v-bind:location="product.location"
-                    v-bind:price="product.price"
-      />
-    </div>
-    <div id="events-bottom-container">
-      <div class="events-bottom-subcontainer">
-        <h2>{{ titleupdates }}</h2>
+  <div>
+
+    <Header/>
+
+    <div id="principal-container">
+      <div>
+        <h1 id="main-title">{{ title }}</h1>
       </div>
-      <div class="events-bottom-subcontainer">
-        <img id="arrow-events" src="../assets/img/arrow_events.png" alt="arrow down">
+      <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1siY21nn9fB8T2CBk_xLZbc6jgzpV7ITz"></iframe>
+      <div>
+        <RestaurantProduct v-for="(product, index) in products" v-bind:key="index"
+                           v-bind:name="product.name"
+                           v-bind:image="product.image"
+                           v-bind:description="product.description"
+                           v-bind:time="product.time"
+                           v-bind:location="product.location"
+                           v-bind:price="product.price"
+        />
       </div>
+      <div id="events-bottom-container">
+        <div class="events-bottom-subcontainer">
+          <h2>{{ titleupdates }}</h2>
+        </div>
+        <div class="events-bottom-subcontainer">
+          <img id="arrow-events" src="../assets/img/arrow_events.png" alt="arrow down">
+        </div>
+      </div>
+
     </div>
 
+    <Footer/>
+
   </div>
+
 </template>
 
 <script>
@@ -31,11 +40,13 @@
 
 import RestaurantProduct from "./RestaurantProduct";
 import products from "../assets/js/shops";
+import Header from "./Header";
+import Footer from "./Footer";
 
 
 export default {
   name: "Events",
-  components: {RestaurantProduct},
+  components: {Footer, Header, RestaurantProduct},
   data () {
     return {
       title: "Get to know the most important Gastronomic Events in Buenos Aires!",

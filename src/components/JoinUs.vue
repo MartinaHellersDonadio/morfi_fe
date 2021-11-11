@@ -46,7 +46,7 @@
       </div>
 
       <div>
-        <router-link :to="{name: 'HomeView'}"><button id="button-back">Go back</button></router-link>
+        <router-link :to="{name: 'Home'}"><button id="button-back">Go back</button></router-link>
       </div>
     </div>
 
