@@ -26,8 +26,10 @@ import ReviewForm from "./components/ReviewForm";
 import ReserveForm from "./components/ReserveForm";
 import ReservationSuccessView from "./views/ReservationSuccessView";
 import Reviews from "./components/Reviews";
+import ReviewRender from "./components/ReviewRender";
 import ServerErrorView from "./views/ServerErrorView";
 import CheckoutErrView from "./views/CheckoutErrView";
+import ReviewSuccessView from "./views/ReviewSuccessView";
 
 
 const routes = [
@@ -49,6 +51,8 @@ const routes = [
   { path: '/restaurants/puntosushi', name: "PuntoSushi", component: PuntoSushi},
   { path: '/restaurants/bocatoro', name: "BocaToro", component: BocaToro},
   { path: '/reviewform', name: "ReviewForm", component: ReviewForm},
+  { path: '/reviewform/reviewsuccess', name: "ReviewSuccess", component: ReviewSuccessView},
+  { path: '/reviewrender', name: "ReviewRender", component: ReviewRender},
   { path: '/reserve', name: "ReserveForm", component: ReserveForm},
   { path: '/reserve/reservesuccess', name: "ReserveSuccess", component: ReservationSuccessView},
   { path: '/reserve/checkouterr', name: "CheckoutErr", component: CheckoutErrView},

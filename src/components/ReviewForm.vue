@@ -4,27 +4,16 @@
 
     <form method="post" @submit.prevent="review()">
       <div>
-        <h2>
-          Your overall rating of this restaurant
+        <h2 class="text-review">
+          Your overall rating of this restaurant from 1 - 10
         </h2>
-        <p class="stars-row">
-          <input type="radio" id="1star" name="stars" value="5stars" v-model="picked"/>
-          <label class="star-label" for="1star"></label>
-          <input type="radio" id="2star" name="stars" value="4stars" v-model="picked"/>
-          <label class="star-label" for="2star"></label>
-          <input type="radio" id="3star" name="stars" value="3stars" v-model="picked"/>
-          <label class="star-label" for="3star"></label>
-          <input type="radio" id="4star" name="stars" value="2stars" v-model="picked"/>
-          <label class="star-label" for="4star"></label>
-          <input type="radio" id="5star" name="stars" value="1stars" v-model="picked"/>
-          <label class="star-label" for="5star"></label>
-        </p>
+        <input type="number" class="number-scale" min = "1" max="10" v-model="scale">
       </div>
-      <h2>Your review</h2>
+      <h2 class="text-review">Your review</h2>
 
       <textarea class="textarea" type="text" cols="20" rows="4" v-model="comment" placeholder="Tell people about your experience: your meal, atmosphere, service?"></textarea>
 
-      <h2>Date of visit</h2>
+      <h2 class="text-review">Date of visit</h2>
 
       <div class="section-bottom">
         <input type="date" id="date" name="review-date" v-model="date"/>
@@ -45,7 +34,7 @@ export default {
   name: "ReviewForm",
   data () {
     return {
-      picked: "",
+      scale: "",
       comment: "",
       date: "",
       restaurant_id: this.$route.params["shop_id"],
@@ -56,7 +45,7 @@ export default {
       const active_user = JSON.parse(sessionStorage.getItem('activeUser'))
       const body = {
         user_name: active_user.username,
-        stars: this.picked,
+        scale: this.scale,
         comment: this.comment,
         date: this.date,
         shop_id: this.restaurant_id,
@@ -66,7 +55,7 @@ export default {
       axios.post("http://localhost:5000/api/v1/reviews", body)
           .then(response => {
             console.log(response)
-            this.$router.push({name: "JoinSuccess"})
+            this.$router.push({name: "ReviewSuccess"})
           })
           .catch(error => {
             console.log(error);
@@ -88,60 +77,46 @@ export default {
   flex-direction: column;
   margin: auto;
   align-items: center;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  width: 550px;
+  height: 680px;
 }
 
-h1 {
-  font-weight: bold;
-  font-size: 32px;
-  text-align: center;
-}
 
-h2 {
+.text-review {
   font-weight: 500;
   font-size: 16px;
   margin-top: 40px;
   text-align: center;
+  color: #E12424;
+  font-weight: bolder;
 }
 
-
-.stars-row {
-  width: 200px;
-  display: flex;
-  flex-direction: row;
-  direction: rtl;
-  unicode-bidi: bidi-override;
+input[type="number"]{
   margin: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
 }
 
-.star-label:hover {
-  background-image: url('../assets/img/filled-star.png');
+.number-scale {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+
 }
 
-.star-label:hover ~ label {
-  background-image: url('../assets/img/filled-star.png');
-}
-
-.star-label {
-  background-image: url('../assets/img/star.png');
-  width: 40px;
-  height: 40px;
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-}
-
-input[type="radio"]:checked ~ .star-label {
-  background-image: url('../assets/img/filled-star.png');
-}
-
-input[type="radio"] {
-  display: none;
+input[type="text"]{
+  margin: auto;
 }
 
 input[type="date"] {
   width: 160px;
-  margin-top: 20px;
+  margin-top: 30px;
   margin: auto;
   margin-bottom: 80px;
+  display: block;
 
 }
 
@@ -149,6 +124,10 @@ input[type="date"] {
   width: 300px;
   height: 200px;
   margin: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
 }
 
 .button {
@@ -159,6 +138,12 @@ input[type="date"] {
   color: white;
   font-weight: bold;
   margin: auto;
+}
+
+.button:hover {
+  background-color: #E12424;
+  border-color: #E12424;
+
 }
 
 .section-bottom {

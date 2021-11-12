@@ -149,7 +149,7 @@ export default {
   },
   beforeMount() {
 
-  }
+  },
   mounted() {
     if(sessionStorage.activeUser) {
       let activeUser = sessionStorage.activeUser;

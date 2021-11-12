@@ -71,7 +71,7 @@ export default {
   methods: {
     logout(){
       sessionStorage.removeItem('activeUser');
-      this.$router.push('/home');
+      this.$router.push('/');
       window.location.reload();
     },
     alert() {
