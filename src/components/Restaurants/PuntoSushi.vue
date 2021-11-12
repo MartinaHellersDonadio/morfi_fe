@@ -104,10 +104,13 @@
     <div class="general-intro comments">
       <div class="sub-intro">
         <h2 id="title-review"> | Comments & Reviews</h2>
-      </div>
-      <div>
+
+        <div>
+
+        </div>
 
       </div>
+
       <div class="sub-intro">
         <div v-if="!user">
           <router-link :to="{name: 'Signup'}" @click.native="scrollToTop"><button class="review-button">{{ button2 }}</button></router-link>

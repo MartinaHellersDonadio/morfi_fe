@@ -9,10 +9,6 @@
           <img class="tick-img" src="../assets/img/tick_reservation.png" alt="tick img">
           <h2 class="reserve-title"> {{ title }}</h2>
         </div>
-
-        <div class="text">
-          <p class="reserve-paragraph"> {{ subtitle }}</p>
-        </div>
       </div>
 
       <div class="text">
@@ -37,8 +33,7 @@ export default {
   components: {Footer, Header},
   data () {
     return {
-      title: "Awesome!",
-      subtitle: "We received your review correctly!",
+      title: "Thank you for submitting your review!",
       button: "Continue your experience at MORFI",
     }
   }
@@ -79,7 +74,7 @@ export default {
 }
 
 .reserve-title{
-  font-size: 60px;
+  font-size: 40px;
 }
 
 .reserve-paragraph{

@@ -1,7 +1,7 @@
 <template>
   <header>
 
-    <router-link to="/home"><img id="logo" src="../assets/img/morfi_logo.png" alt="Morfi Logo"></router-link>
+    <router-link to="/"><img id="logo" src="../assets/img/morfi_logo.png" alt="Morfi Logo"></router-link>
     <h2 id="title">{{ title }}</h2>
 
     <nav>
