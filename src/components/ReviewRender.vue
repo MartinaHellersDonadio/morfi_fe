@@ -2,7 +2,7 @@
   <section class="testimonies">
 
     <div class="testimonies_container">
-
+      <div class="testimonies_box">
         <div class="box_top">
 
           <div class="profile">
@@ -21,7 +21,7 @@
         <div class="clients_comments">
           <p class="comment">A very charming place, nice music</p>
         </div>
-
+      </div>
     </div>
 
   </section>
@@ -49,12 +49,16 @@ export default {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  width: 100%;
+}
+.testimonies_box{
   width: 500px;
   box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.1);
   background-color: white;
   padding: 20px;
   margin: 15px;
 }
+
 
 .profile{
   display: flex;
