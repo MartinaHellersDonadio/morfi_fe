@@ -65,13 +65,13 @@ export default {
   data () {
     return {
       question1: "What is the main purpose of Morfi's?",
-      answer1: "Be the first place for our users to turn to in search of gastronomic proposals that escape the traditional ones and to be a bridge for restaurant owners to make their proposals visible and connect with diners.",
+      answer1: "Be the first place for people to turn to in search of gastronomic proposals that escape the traditional ones and to be a bridge for restaurant owners to make their proposals visible and connect with diners.",
       question2: "What benefits does subscribing to Morfi's newsletter bring me?",
       answer2: "Not only will you become part of Morfi's community for free but also you will receive the latest news about gastronomic events held all over Buenos Aires and be the first one to hear what the future holds for your favorite website",
       question3: "How do I book a place at the restaurant I want?",
       answer3: "It's simple! You just choose the proposal you like the most from the variety we offer in the \"RESTAURANTS\" section, fill in some information to contact you and the main details of the reservation and that's all!",
       question4: "If I am the owner of restaurant what should I do for my proposal to be part of Morfi?",
-      answer4: "We compromise to make the process simple and fast from the very beginning so you should only complete, at the \"Do you have a restaurant?\" section, some personal information and some details we need to know about your proposal and after we received and evaluated it we contact you through email to make the last arrangements",
+      answer4: "We compromise to make the process simple and fast from the very beginning so you should only complete, at the \"Do you have a restaurant?\" section, some personal information and some details we need to know about your proposal and after we received and evaluated it we will contact you to make the last arrangements",
 
     }
   }

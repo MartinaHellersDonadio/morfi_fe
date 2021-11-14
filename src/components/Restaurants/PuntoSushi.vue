@@ -104,11 +104,6 @@
     <div class="general-intro comments">
       <div class="sub-intro">
         <h2 id="title-review"> | Comments & Reviews</h2>
-
-        <div>
-
-        </div>
-
       </div>
 
       <div class="sub-intro">

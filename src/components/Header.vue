@@ -26,7 +26,7 @@
 
     <div class="logout" v-if="user">
       <div class="logout-subsection">
-        <router-link to="/profile"><img id="logout-id" src="../assets/img/login_icon.png" alt="login icon"></router-link>
+        <img id="logout-id" src="../assets/img/login_icon.png" alt="login icon">
       </div>
 
       <div class="logout-subsection">

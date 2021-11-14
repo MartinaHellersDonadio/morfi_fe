@@ -6,7 +6,6 @@ Vue.config.productionTip = false
 Vue.use(VueRouter)
 import App from './App.vue'
 import Home from "./components/Home";
-import Profile from "./components/Profile";
 import Restaurants from "./components/Restaurants";
 import Events from "./components/Events";
 import Login from "./components/Login";
@@ -25,7 +24,6 @@ import BocaToro from "./components/Restaurants/BocaToro";
 import ReviewForm from "./components/ReviewForm";
 import ReserveForm from "./components/ReserveForm";
 import ReservationSuccessView from "./views/ReservationSuccessView";
-import Reviews from "./components/Reviews";
 import ReviewRender from "./components/ReviewRender";
 import ServerErrorView from "./views/ServerErrorView";
 import CheckoutErrView from "./views/CheckoutErrView";
@@ -34,7 +32,6 @@ import ReviewSuccessView from "./views/ReviewSuccessView";
 
 const routes = [
   { path: '/', name: "Home", component: Home},
-  { path: '/profile', name: "Profile", component: Profile},
   { path: '/restaurants', name: "Restaurants", component: Restaurants},
   { path: '/events', name: "Events", component: Events},
   { path: '/joinus', name: "Joinus", component: JoinUs},
@@ -56,7 +53,6 @@ const routes = [
   { path: '/reserve', name: "ReserveForm", component: ReserveForm},
   { path: '/reserve/reservesuccess', name: "ReserveSuccess", component: ReservationSuccessView},
   { path: '/reserve/checkouterr', name: "CheckoutErr", component: CheckoutErrView},
-  { path: '/reviews/:shop_id?', name: "Reviews", component: Reviews},
   { path: '/err', name: "ServerError", component: ServerErrorView},
 
 ]
