@@ -12,7 +12,7 @@
       </div>
 
       <div class="text">
-        <router-link to="/"><button class="back-btn"><a class="button-title">{{ button }}</a></button></router-link>
+        <router-link to="/restaurants"><button class="back-btn"><a class="button-title">{{ button }}</a></button></router-link>
       </div>
 
     </div>

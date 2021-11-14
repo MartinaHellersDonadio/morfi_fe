@@ -7,19 +7,19 @@
 
           <div class="profile">
             <div class="username">
-              <p class="comment user">{{ user_name }}</p>
-              <p class="comment">{{ date }}</p>
+              <p class="comment user">@{{ user_name }}</p>
+              <p class="comment date">{{ date }}</p>
             </div>
           </div>
 
           <div class="points">
-            <p> <span id="number">{{ scale }}/10</span></p>
+            <p id="number-input"> {{ scale }}<span id="number"> / 10</span></p>
           </div>
 
         </div>
 
         <div class="clients_comments">
-          <p class="comment">{{ comment }}</p>
+          <p class="comment review">{{ comment }}</p>
         </div>
       </div>
     </div>
@@ -41,8 +41,8 @@ export default {
   align-items: center;
   flex-direction: column;
   width: 100%;
-  margin-bottom: 100px;
-  margin-top: 100px;
+  margin-bottom: 30px;
+  margin-top: 30px;
 }
 
 .testimonies_container{
@@ -51,9 +51,10 @@ export default {
   align-items: center;
   flex-wrap: wrap;
   width: 100%;
+  overflow-wrap: break-word;
 }
 .testimonies_box{
-  width: 500px;
+  width: 800px;
   box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.1);
   background-color: white;
   padding: 20px;
@@ -78,17 +79,12 @@ export default {
   color: #3d3d3d;
   font-size: 1.3rem;
 }
-.username span{
-  color: #979797;
-  font-size: 1.1rem;
-  margin: 1px;
-}
 
 .box_top{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
 }
 .clients_comments{
   color: #4b4b4b;
@@ -101,11 +97,26 @@ export default {
 
 .user {
   color: #E12424;
+  font-size: 40px;
+}
+
+.date {
+  font-size: 25px;
+  font-weight: bolder;
+}
+
+.review {
   font-size: 30px;
+  font-weight: lighter;
 }
 
 #number {
   color: #8FC460;
+  font-size: 80px;
+}
+
+#number-input {
+  color: #3d3d3d;
   font-size: 80px;
 }
 </style>

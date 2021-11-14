@@ -38,7 +38,7 @@
           <input type="time" name="closeTime" id="closeTime" required tabindex="6" v-model="closeTime">
           <br>
 
-          <textarea id="description" name="description" class="description" rows="4" cols="50" required maxlength="240" v-model="description"> Write a brief description of your restaurant and your gastronmic proposal</textarea>
+          <textarea id="description" name="description" class="description" rows="4" cols="50" required maxlength="240" v-model="description" placeholder="Write a brief description of your restaurant and your gastronmic proposal"></textarea>
 
           <button type="submit" class="formbtn">Submit</button>
         </form>
