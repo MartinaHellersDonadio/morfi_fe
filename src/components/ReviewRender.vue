@@ -7,19 +7,19 @@
 
           <div class="profile">
             <div class="username">
-              <p class="comment user">Username</p>
-              <p class="comment">Date</p>
+              <p class="comment user">{{ user_name }}</p>
+              <p class="comment">{{ date }}</p>
             </div>
           </div>
 
           <div class="points">
-            <p> <span id="number">/10</span></p>
+            <p> <span id="number">{{ scale }}/10</span></p>
           </div>
 
         </div>
 
         <div class="clients_comments">
-          <p class="comment">A very charming place, nice music</p>
+          <p class="comment">{{ comment }}</p>
         </div>
       </div>
     </div>
@@ -29,7 +29,8 @@
 
 <script>
 export default {
-  name: "ReviewRender"
+  name: "ReviewRender",
+  props: ["user_name", "date", "comment", "scale"]
 }
 </script>
 

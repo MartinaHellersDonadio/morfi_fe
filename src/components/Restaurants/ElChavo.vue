@@ -115,7 +115,15 @@
       </div>
     </div>
 
+    <div>
 
+      <ReviewRender v-for="(review, index) in reviews" v-bind:key = "index"
+                    v-bind:user_name="review.user_name"
+                    v-bind:comment="review.comment"
+                    v-bind:date="review.date"
+                    v-bind:scale="review.scale"
+      />
+    </div>
 
     <Footer/>
 
@@ -128,10 +136,13 @@ import Footer from "../Footer";
 
 import shops from '../../assets/js/shops';
 
+import axios from "axios";
+import ReviewRender from "../ReviewRender";
+
 
 export default {
   name: "ElChavo",
-  components: {Footer, Header},
+  components: {ReviewRender, Footer, Header},
   data () {
     return {
       chavorestaurant: shops.restaurantProducts[2],
@@ -139,6 +150,7 @@ export default {
       mapa: "see map",
       button1: "Reserve your table",
       button2: "Review",
+      reviews: []
     }
   },
   mounted() {
@@ -146,6 +158,14 @@ export default {
       let activeUser = sessionStorage.activeUser;
       this.user = JSON.parse(activeUser);
     }
+    axios.get('http://localhost:5000/api/v1/reviews/' + this.chavorestaurant["shop_id"])
+        .then(response => {
+          response.data.map(review => this.reviews.push(review))
+        })
+        .catch(error => {
+          console.log(error);
+          this.$router.push({name: "ServerError"})
+        });
   },
   methods: {
     review() {

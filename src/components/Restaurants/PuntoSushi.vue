@@ -117,6 +117,15 @@
       </div>
     </div>
 
+    <div>
+
+      <ReviewRender v-for="(review, index) in reviews" v-bind:key = "index"
+                    v-bind:user_name="review.user_name"
+                    v-bind:comment="review.comment"
+                    v-bind:date="review.date"
+                    v-bind:scale="review.scale"
+      />
+    </div>
 
 
     <Footer/>
@@ -131,10 +140,12 @@ import Footer from "../Footer";
 import shops from '../../assets/js/shops';
 
 import axios from "axios";
+import ReviewRender from "../ReviewRender";
 
 export default {
   name: "PuntoSushi",
-  components: {Footer, Header},
+  components: {ReviewRender, Footer, Header},
+
   data () {
     return {
       sushirestaurant: shops.restaurantProducts[4],
@@ -155,7 +166,7 @@ export default {
     }
     axios.get('http://localhost:5000/api/v1/reviews/' + this.sushirestaurant["shop_id"])
         .then(response => {
-          console.log(response.data)
+          response.data.map(review => this.reviews.push(review))
         })
         .catch(error => {
           console.log(error);
