@@ -1,7 +1,7 @@
 # MORFI 🍴
 Una plataforma web que busca ser un _puente_ entre los comensales y las diversas ofertas gastronómicas de la Ciudad de Buenos Aires. Un aspecto que resulta fundamental para visualizarse en tiempos de pandemia y un factor clave para avanzar en el proceso de transformación digital y poder optimizar, cada vez más, la experiencia que le brindan a sus clientes.
 
-## Acerca del proyecto 🌮
+## Sobre el proyecto 🌮
 
 MORFI es una plataforma web que busca, entre otras cosas:
 - Conectar a los restaurantes con comensales
