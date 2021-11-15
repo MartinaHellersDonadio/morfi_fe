@@ -18,7 +18,7 @@
           <input type="text"  placeholder="Enter your name" v-model="ownerName" id="ownersName" tabindex="1" required>
 
           <label><b>Email</b></label>
-          <input type="text" placeholder="Enter Email" v-model="email" required>
+          <input type="email" placeholder="Enter Email" v-model="email" required>
 
           <label><b>Restaurant Name</b></label>
           <input type="text"  placeholder="Enter your Restaurant Name" v-model="restaurantName" id="restName" tabindex="2" required>

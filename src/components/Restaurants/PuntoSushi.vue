@@ -156,9 +156,6 @@ export default {
       reviews: []
     }
   },
-  beforeMount() {
-
-  },
   mounted() {
     if(sessionStorage.activeUser) {
       let activeUser = sessionStorage.activeUser;

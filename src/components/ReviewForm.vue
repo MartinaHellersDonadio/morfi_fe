@@ -7,7 +7,7 @@
         <h2 class="text-review">
           Your overall rating of this restaurant from 1 - 10
         </h2>
-        <input type="number" class="number-scale" min = "1" max="10" v-model="scale">
+        <input type="number" class="number-scale" min = "1" max="10" v-model="scale" required>
       </div>
       <h2 class="text-review">Your review</h2>
 
@@ -16,7 +16,7 @@
       <h2 class="text-review">Date of visit</h2>
 
       <div class="section-bottom">
-        <input type="date" id="date" name="review-date" v-model="date"/>
+        <input type="date" id="date" name="review-date" v-model="date" required/>
 
         <button type="submit" class="button">Submit my review</button>
 
@@ -77,7 +77,7 @@ export default {
   flex-direction: column;
   margin: auto;
   align-items: center;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   width: 550px;
   height: 680px;
 }

@@ -47,6 +47,16 @@
             </div>
           </div>
 
+          <div class="accordion-item" id="question5">
+            <a class="accordion-link" href="#question5">
+              {{ question5 }}
+              <ion-icon name="chevron-down-outline"></ion-icon>
+            </a>
+            <div class="answer">
+              <p> {{ answer5 }}</p>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
@@ -66,12 +76,14 @@ export default {
     return {
       question1: "What is the main purpose of Morfi's?",
       answer1: "Be the first place for people to turn to in search of gastronomic proposals that escape the traditional ones and to be a bridge for restaurant owners to make their proposals visible and connect with diners.",
-      question2: "What benefits does subscribing to Morfi's newsletter bring me?",
-      answer2: "Not only will you become part of Morfi's community for free but also you will receive the latest news about gastronomic events held all over Buenos Aires and be the first one to hear what the future holds for your favorite website",
+      question2: "What happens if I don't attend my reservation?",
+      answer2: "The restaurants have a 15-minute extension before the reservation time. The restaurant reserves the right to cancel your reservation and occupy your table if the tolerance time limit has passed",
       question3: "How do I book a place at the restaurant I want?",
       answer3: "It's simple! You just choose the proposal you like the most from the variety we offer in the \"RESTAURANTS\" section, fill in some information to contact you and the main details of the reservation and that's all!",
-      question4: "If I am the owner of restaurant what should I do for my proposal to be part of Morfi?",
-      answer4: "We compromise to make the process simple and fast from the very beginning so you should only complete, at the \"Do you have a restaurant?\" section, some personal information and some details we need to know about your proposal and after we received and evaluated it we will contact you to make the last arrangements",
+      question4: "What benefits does subscribing to Morfi's newsletter bring me?",
+      answer4: "Not only will you become part of Morfi's community for free but also you will receive the latest news about gastronomic events held all over Buenos Aires and be the first one to hear what the future holds for your favorite website",
+      question5: "If I am the owner of restaurant what should I do for my proposal to be part of Morfi?",
+      answer5: "We compromise to make the process simple and fast from the very beginning so you should only complete, at the \"Do you have a restaurant?\" section, some personal information and some details we need to know about your proposal and after we received and evaluated it we will contact you to make the last arrangements",
 
     }
   }
@@ -108,7 +120,7 @@ section{
   max-width: 80rem;
   margin: 0 auto;
   padding: 0 1.5rem;
-  margin-top: 250px;
+  margin-top: 300px;
   margin-bottom: 50px;
 }
 

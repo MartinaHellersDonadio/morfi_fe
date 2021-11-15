@@ -24,7 +24,7 @@
             <h3> {{ title3 }}</h3>
             <h4> {{ description3 }}</h4>
             <form method="post" @submit.prevent="subscribe()">
-              <input type="email"  v-model="subscribeEmail" id="footer-email" placeholder="Enter Your Email Address" required>
+              <input type="email"  v-model="subscribeEmail" id="footer-email" placeholder="Email Address" required>
               <button type="submit" class="footer-email-btn">Suscribe</button>
             </form>
           </div>
