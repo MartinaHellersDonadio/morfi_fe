@@ -108,6 +108,7 @@ export default {
 .review {
   font-size: 30px;
   font-weight: lighter;
+  font-style: italic;
 }
 
 #number {
