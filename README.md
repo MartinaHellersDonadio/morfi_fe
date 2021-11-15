@@ -1,5 +1,5 @@
 # MORFI
-Plataforma para conectar restaurantes con comensales
+Una plataforma para conectar restaurantes con comensales
 
 ## Un poco acerca del proyecto
 
@@ -27,9 +27,9 @@ npm install axios
 ```
 Para finalmente poder conocer y disfrutar de nuestra plataforma deberá continuar con las instrucciones señaladas en: https://github.com/MartinaHellersDonadio/morfi_backend
 
-##Autores
+## Autores
 - Martina Hellers Donadío
-- Máximo Cabezas
+- Máximo Cabezas Fernández
 - Nicolás Btech Levy
 - Sofía Gramuglia
 - Anthony Micha
