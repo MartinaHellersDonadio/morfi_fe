@@ -1,5 +1,5 @@
 # MORFI
-Una plataforma para conectar restaurantes con comensales
+Una plataforma que busca ser un _puente_ entre los comensales y las diversas ofertas gastronómicas de la Ciudad de Buenos Aires
 
 ## Un poco acerca del proyecto
 
