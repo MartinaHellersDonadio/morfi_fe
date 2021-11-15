@@ -11,7 +11,7 @@ MORFI es una plataforma web que busca, entre otras cosas:
 
 
 ## Guía de instalacion
-Para poder correr esta plataforma web desde su computadora, resulta fundamental contar con el framework VueJs en la IDE que sea de su preferencia e instalar con anterioridad el entorno de ejecución para Javascript "NPM" desde la terminal:
+Para poder correr esta plataforma web desde su computadora, resulta fundamental contar con el framework [VueJs](https://vuejs.org/) en la IDE que sea de su preferencia e instalar con anterioridad el entorno de ejecución para Javascript "NPM" desde la terminal:
 
 ```
 npm install
