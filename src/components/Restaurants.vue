@@ -23,7 +23,7 @@
 
         <div class="subcontainer">
           <div class="image-wrapper">
-            <router-link to="/restaurants/elchavo" @click.native="scrollToTop"><img class="image" src="../assets/img/products/el_chavo.jpg" alt="bondi location"></router-link>
+            <router-link to="/restaurants/elchavo" @click.native="scrollToTop"><img class="image" src="../assets/img/products/el_chavo.jpg" alt="el chavo menu"></router-link>
             <div class="text-image">Look into it!</div>
           </div>
           <h1 class="name">Parilla El Chavo</h1>
@@ -32,7 +32,7 @@
 
         <div class="subcontainer">
           <div class="image-wrapper">
-            <router-link to="/restaurants/italianbar" @click.native="scrollToTop"><img class="image" src="../assets/img/products/italian_bar.jpg" alt="bondi menu"></router-link>
+            <router-link to="/restaurants/italianbar" @click.native="scrollToTop"><img class="image" src="../assets/img/products/italian_bar.jpg" alt="italian menu"></router-link>
             <div class="text-image">Look into it!</div>
           </div>
           <h1 class="name">D´oro Italian Bar</h1>
@@ -46,7 +46,7 @@
       <div class="resto-container">
         <div class="subcontainer">
           <div class="image-wrapper">
-            <router-link to="/restaurants/naturalezasabia" @click.native="scrollToTop"><img class="image" src="../assets/img/products/naturaleza_sabia.jpg" alt="bondi menu"></router-link>
+            <router-link to="/restaurants/naturalezasabia" @click.native="scrollToTop"><img class="image" src="../assets/img/products/naturaleza_sabia.jpg" alt="naturaleza menu"></router-link>
             <div class="text-image">Look into it!</div>
           </div>
           <h1 class="name">Naturaleza Sabia</h1>
@@ -55,7 +55,7 @@
 
         <div class="subcontainer">
           <div class="image-wrapper">
-            <router-link to="/restaurants/puntosushi" @click.native="scrollToTop"><img class="image" src="../assets/img/products/punto_sushi.jpg" alt="bondi location"></router-link>
+            <router-link to="/restaurants/puntosushi" @click.native="scrollToTop"><img class="image" src="../assets/img/products/punto_sushi.jpg" alt="punto sushi location"></router-link>
             <div class="text-image">Look into it!</div>
           </div>
           <h1 class="name">Punto Sushi</h1>
@@ -67,7 +67,7 @@
 
         <div class="subcontainer">
           <div class="image-wrapper">
-            <router-link to="/restaurants/bocatoro" @click.native="scrollToTop"><img class="image" src="../assets/img/products/boca_toro.jpg" alt="bondi menu"></router-link>
+            <router-link to="/restaurants/bocatoro" @click.native="scrollToTop"><img class="image" src="../assets/img/products/boca_toro.jpg" alt="boca toro menu"></router-link>
             <div class="text-image">Look into it!</div>
           </div>
           <h1 class="name">Boca de Toro</h1>

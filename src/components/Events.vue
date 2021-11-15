@@ -4,10 +4,13 @@
     <Header/>
 
     <div id="principal-container">
+
       <div>
         <h1 id="main-title">{{ title }}</h1>
       </div>
+
       <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1siY21nn9fB8T2CBk_xLZbc6jgzpV7ITz"></iframe>
+
       <div>
         <RestaurantProduct v-for="(product, index) in products" v-bind:key="index"
                            v-bind:name="product.name"
@@ -18,6 +21,7 @@
                            v-bind:price="product.price"
         />
       </div>
+
       <div id="events-bottom-container">
         <div class="events-bottom-subcontainer">
           <h2>{{ titleupdates }}</h2>

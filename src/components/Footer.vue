@@ -2,6 +2,7 @@
   <div>
 
     <footer>
+
       <div class="footer-container">
         <div class="row">
 
@@ -30,10 +31,13 @@
           </div>
 
         </div>
+
           <p class="footer-bottom">{{ copyRight }}</p>
+
       </div>
 
     </footer>
+
   </div>
 </template>
 

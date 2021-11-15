@@ -25,7 +25,7 @@ Y para poder asegurarse de poder establecer la conexión con el servidor, deber�
 ```
 npm install axios
 ```
-Para finalmente poder conocer y disfrutar de nuestra plataforma deberá continuar con las instrucciones señaladas en: https://github.com/MartinaHellersDonadio/morfi_backend
+Para finalmente poder conocer y disfrutar de nuestra plataforma deberá poner en funcionamiento el servidor con anterioridad y continuar con las instrucciones señaladas en: https://github.com/MartinaHellersDonadio/morfi_backend
 
 ## Autores ✒️
 - Martina Hellers Donadío
